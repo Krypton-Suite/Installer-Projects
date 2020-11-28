@@ -10,7 +10,7 @@
     <ROW Property="AI_FINDEXE_TITLE" Value="Select the installation package for [|ProductName]" ValueLocId="AI.Property.FindExeTitle"/>
     <ROW Property="AI_FrameBtnsColor" Value="metroblack" MultiBuildValue="DefaultBuild:metroorange" MsiKey="AI_FrameBtnsColor"/>
     <ROW Property="AI_FrameColor" Value="metroblack" MultiBuildValue="DefaultBuild:metroorange" MsiKey="AI_FrameColor"/>
-    <ROW Property="AI_PRODUCTNAME_ARP" Value="Extended Toolkit Help Installer"/>
+    <ROW Property="AI_PRODUCTNAME_ARP" Value="[|ProductName]"/>
     <ROW Property="AI_ThemeStyle" Value="default" MultiBuildValue="DefaultBuild:metroorange" MsiKey="AI_ThemeStyle"/>
     <ROW Property="AI_UNINSTALLER" Value="msiexec.exe"/>
     <ROW Property="ALLUSERS" Value="1"/>
@@ -20,7 +20,7 @@
     <ROW Property="Manufacturer" Value="Krypton Suite"/>
     <ROW Property="ProductCode" Value="1033:{BD04973C-3C9F-44FA-9F3E-260CEF8EEB32} " Type="16"/>
     <ROW Property="ProductLanguage" Value="1033"/>
-    <ROW Property="ProductName" Value="Extended Toolkit Help Installer"/>
+    <ROW Property="ProductName" Value="Krypton Extended Toolkit Help"/>
     <ROW Property="ProductVersion" Value="5.550.2101" Type="32"/>
     <ROW Property="SecureCustomProperties" Value="OLDPRODUCTS;AI_NEWERPRODUCTFOUND;AI_SETUPEXEPATH;SETUPEXEDIR"/>
     <ROW Property="UpgradeCode" Value="{72A01C1A-89CD-4DB0-B0FF-C89729FFE2A6}"/>
