@@ -351,3 +351,4 @@ MigrationBackup/
 *.cab
 *.msi
 *.exe
+*.ini
