@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<DOCUMENT Type="Advanced Installer" CreateVersion="17.6" version="17.6" Modules="professional" RootPath="." Language="en_GB" Id="{ED2B5150-1782-49B8-BDBD-171490F33C3D}">
+<DOCUMENT Type="Advanced Installer" CreateVersion="17.6" version="18.0" Modules="professional" RootPath="." Language="en_GB" Id="{ED2B5150-1782-49B8-BDBD-171490F33C3D}">
   <COMPONENT cid="caphyon.advinst.msicomp.MsiPropsComponent">
     <ROW Property="AI_BITMAP_DISPLAY_MODE" Value="0"/>
     <ROW Property="AI_COLOR_DISABLED_TEXT" Value="3026478" MultiBuildValue="DefaultBuild:15461355" MsiKey="AI_COLOR_DISABLED_TEXT"/>
@@ -18,15 +18,17 @@
     <ROW Property="AI_UNINSTALLER" Value="msiexec.exe"/>
     <ROW Property="ALLUSERS" Value="1"/>
     <ROW Property="ARPCOMMENTS" Value="This installer database contains the logic and data required to install [|ProductName]." ValueLocId="*"/>
+    <ROW Property="ARPHELPLINK" Value="https://krypton-suite.github.io/Standard-Toolkit-Online-Help/Source/Help/Output/index.html"/>
     <ROW Property="ARPNOREPAIR" Value="1" MultiBuildValue="DefaultBuild:1"/>
     <ROW Property="ARPPRODUCTICON" Value="SquareDesign48x48Green.exe" Type="8"/>
     <ROW Property="ARPSYSTEMCOMPONENT" Value="1"/>
+    <ROW Property="ARPURLINFOABOUT" Value="https://github.com/Krypton-Suite/Standard-Toolkit/issues"/>
     <ROW Property="AppLogoIcon" Value="applogoicon" MultiBuildValue="DefaultBuild:SquareDesign48x48Green.bmp" Type="1" MsiKey="AppLogoIcon"/>
     <ROW Property="Manufacturer" Value="Krypton Suite"/>
-    <ROW Property="ProductCode" Value="1036:{4045F2EB-2CCD-4CC9-BD40-E2C51569BEAE} 2057:{4045F2EB-2CCD-4CC9-BD40-E2C51569BEAE} " Type="16"/>
+    <ROW Property="ProductCode" Value="1036:{0969D9E6-489F-4ECD-B01F-3900E5C8975D} 2057:{0969D9E6-489F-4ECD-B01F-3900E5C8975D} " Type="16"/>
     <ROW Property="ProductLanguage" Value="2057"/>
     <ROW Property="ProductName" Value="Krypton Standard Toolkit Suite"/>
-    <ROW Property="ProductVersion" Value="5.550.2011.0" Type="32" TargetFile="Krypton.Toolkit.dll_12"/>
+    <ROW Property="ProductVersion" Value="5.550.2103.0" Type="32" TargetFile="Krypton.Toolkit.dll_12"/>
     <ROW Property="SecureCustomProperties" Value="OLDPRODUCTS;AI_NEWERPRODUCTFOUND;AI_SETUPEXEPATH;SETUPEXEDIR"/>
     <ROW Property="UpgradeCode" Value="{89A4ADAF-AE74-447E-96E0-409DA19F2210}"/>
     <ROW Property="WindowsType9X" MultiBuildValue="DefaultBuild:Windows 9x/ME" ValueLocId="-"/>
@@ -51,6 +53,7 @@
     <ROW Directory="DLLs_Dir" Directory_Parent="Binaries_Dir" DefaultDir="DLLs"/>
     <ROW Directory="DesktopFolder" Directory_Parent="TARGETDIR" DefaultDir="DESKTO~1|DesktopFolder" IsPseudoRoot="1"/>
     <ROW Directory="Examples_Dir" Directory_Parent="Binaries_Dir" DefaultDir="Examples"/>
+    <ROW Directory="HelpLibrary_Dir" Directory_Parent="Help_Dir" DefaultDir="HELPLI~1|Help Library"/>
     <ROW Directory="Help_Dir" Directory_Parent="APPDIR" DefaultDir="Help"/>
     <ROW Directory="ItemTemplates_1_Dir" Directory_Parent="ZIP_Dir" DefaultDir="ITEMTE~1|ItemTemplates"/>
     <ROW Directory="ItemTemplates_Dir" Directory_Parent="VISX_Dir" DefaultDir="ITEMTE~1|Item Templates"/>
@@ -103,13 +106,14 @@
     <ROW Directory="net48_Dir" Directory_Parent="DLLs_Dir" DefaultDir="net48"/>
     <ROW Directory="net5.0windows_1_Dir" Directory_Parent="Examples_Dir" DefaultDir="NET5~1.0-W|net5.0-windows"/>
     <ROW Directory="net5.0windows_Dir" Directory_Parent="DLLs_Dir" DefaultDir="NET5~1.0-W|net5.0-windows"/>
+    <ROW Directory="netcoreapp3.0_Dir" Directory_Parent="DLLs_Dir" DefaultDir="NETCOR~1.0|netcoreapp3.0"/>
     <ROW Directory="netcoreapp3.1_1_Dir" Directory_Parent="Examples_Dir" DefaultDir="NETCOR~1.1|netcoreapp3.1"/>
     <ROW Directory="netcoreapp3.1_Dir" Directory_Parent="DLLs_Dir" DefaultDir="NETCOR~1.1|netcoreapp3.1"/>
     <ROW Directory="ref_1_Dir" Directory_Parent="net5.0windows_1_Dir" DefaultDir="ref"/>
     <ROW Directory="ref_Dir" Directory_Parent="net5.0windows_Dir" DefaultDir="ref"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiCompsComponent">
-    <ROW Component="AI_CustomARPName" ComponentId="{B3FD2A64-C7FD-46F4-8F72-AD89FA2797A9}" Directory_="APPDIR" Attributes="4" KeyPath="DisplayName" Options="1"/>
+    <ROW Component="AI_CustomARPName" ComponentId="{9D420E74-B7A1-4CDB-8215-8715425BC9F7}" Directory_="APPDIR" Attributes="4" KeyPath="DisplayName" Options="1"/>
     <ROW Component="AI_ExePath" ComponentId="{1EBC4978-6A27-4E52-95C8-6655895A5360}" Directory_="APPDIR" Attributes="4" KeyPath="AI_ExePath"/>
     <ROW Component="APPDIR" ComponentId="{FB9DC5FB-5E3A-4E3E-BB74-94E26AAF914C}" Directory_="APPDIR" Attributes="0"/>
     <ROW Component="Access2007AltWhiteText.xml" ComponentId="{03461F44-41A6-466E-BE60-CEB8A812D649}" Directory_="__Dir" Attributes="0" KeyPath="Access2007AltWhiteText.xml" Type="0"/>
@@ -158,7 +162,7 @@
     <ROW Component="ApplicationMenu.exe" ComponentId="{4C59150D-CEF7-4446-9B5C-F6E4ACACE25B}" Directory_="net35_1_Dir" Attributes="0" KeyPath="ApplicationMenu.exe"/>
     <ROW Component="ApplicationMenu.exe_1" ComponentId="{C7647838-F560-4C7D-A2DC-84665CC73DB2}" Directory_="net45_1_Dir" Attributes="0" KeyPath="ApplicationMenu.exe_1"/>
     <ROW Component="ApplicationMenu.exe_10" ComponentId="{E4093D24-D063-47AA-A824-647795350900}" Directory_="net48_1_Dir" Attributes="0" KeyPath="ApplicationMenu.exe_10"/>
-    <ROW Component="ApplicationMenu.exe_11" ComponentId="{034EBFEC-A2B4-4AEA-92C8-B4556F7050CA}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="ApplicationMenu.pdb_11"/>
+    <ROW Component="ApplicationMenu.exe_11" ComponentId="{034EBFEC-A2B4-4AEA-92C8-B4556F7050CA}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="ApplicationMenu.pdb_11" Type="4"/>
     <ROW Component="ApplicationMenu.exe_12" ComponentId="{37A5B9AE-57C8-41C0-BCF0-9EAB159F2C99}" Directory_="netcoreapp3.1_1_Dir" Attributes="256" KeyPath="ApplicationMenu.exe_12"/>
     <ROW Component="ApplicationMenu.exe_13" ComponentId="{E2F0F463-5C27-4E39-B6DD-CB198CE88748}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="ApplicationMenu.exe_11"/>
     <ROW Component="ApplicationMenu.exe_2" ComponentId="{16F754CF-B9BF-4916-BC85-8704B4D95A4C}" Directory_="net451_1_Dir" Attributes="0" KeyPath="ApplicationMenu.exe_2"/>
@@ -180,7 +184,7 @@
     <ROW Component="AutoShrinkingGroups.exe" ComponentId="{68BC574E-BF09-437B-8E70-20F87581BB13}" Directory_="net35_1_Dir" Attributes="0" KeyPath="AutoShrinkingGroups.exe"/>
     <ROW Component="AutoShrinkingGroups.exe_1" ComponentId="{FA458AEA-D114-41A6-AA2E-555F99DE236F}" Directory_="net45_1_Dir" Attributes="0" KeyPath="AutoShrinkingGroups.exe_1"/>
     <ROW Component="AutoShrinkingGroups.exe_10" ComponentId="{92538C74-A29B-44FD-8CE5-1D0140AC1C9F}" Directory_="net48_1_Dir" Attributes="0" KeyPath="AutoShrinkingGroups.exe_10"/>
-    <ROW Component="AutoShrinkingGroups.exe_11" ComponentId="{3475F1F3-2272-462B-973F-182F245838E3}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="AutoShrinkingGroups.pdb_11"/>
+    <ROW Component="AutoShrinkingGroups.exe_11" ComponentId="{3475F1F3-2272-462B-973F-182F245838E3}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="AutoShrinkingGroups.pdb_11" Type="4"/>
     <ROW Component="AutoShrinkingGroups.exe_12" ComponentId="{BFA236DD-5CFE-4ACA-A0D6-D46B74816E36}" Directory_="netcoreapp3.1_1_Dir" Attributes="256" KeyPath="AutoShrinkingGroups.exe_12"/>
     <ROW Component="AutoShrinkingGroups.exe_13" ComponentId="{C83FF530-D37F-4BB5-AB78-D3BBEE9EFF17}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="AutoShrinkingGroups.exe_11"/>
     <ROW Component="AutoShrinkingGroups.exe_2" ComponentId="{1908D261-D4D5-4A0A-B4DA-052936712BAB}" Directory_="net451_1_Dir" Attributes="0" KeyPath="AutoShrinkingGroups.exe_2"/>
@@ -201,7 +205,7 @@
     <ROW Component="BasicEvents.exe" ComponentId="{58080750-65C3-4822-BA09-2FCBE9632144}" Directory_="net35_1_Dir" Attributes="0" KeyPath="BasicEvents.exe"/>
     <ROW Component="BasicEvents.exe_1" ComponentId="{76529572-46FD-4ED1-A8D7-EA00BD353FAE}" Directory_="net45_1_Dir" Attributes="0" KeyPath="BasicEvents.exe_1"/>
     <ROW Component="BasicEvents.exe_10" ComponentId="{439BF9E7-CD6B-4A72-B747-EE03BFD080EF}" Directory_="net48_1_Dir" Attributes="0" KeyPath="BasicEvents.exe_10"/>
-    <ROW Component="BasicEvents.exe_11" ComponentId="{86AEE757-8EF0-4278-A6A4-022FF571F0A5}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="BasicEvents.pdb_11"/>
+    <ROW Component="BasicEvents.exe_11" ComponentId="{86AEE757-8EF0-4278-A6A4-022FF571F0A5}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="BasicEvents.pdb_11" Type="4"/>
     <ROW Component="BasicEvents.exe_12" ComponentId="{0EA52434-E1E7-4228-BB46-3DA115FEB37B}" Directory_="netcoreapp3.1_1_Dir" Attributes="256" KeyPath="BasicEvents.exe_12"/>
     <ROW Component="BasicEvents.exe_13" ComponentId="{18EF8955-D45D-4252-8985-768FA8467167}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="BasicEvents.exe_11"/>
     <ROW Component="BasicEvents.exe_2" ComponentId="{677F5E78-265F-43BF-8637-057BF33E7870}" Directory_="net451_1_Dir" Attributes="0" KeyPath="BasicEvents.exe_2"/>
@@ -222,7 +226,7 @@
     <ROW Component="BasicPageDragandDrop.exe" ComponentId="{7690AE33-3D4D-448F-9699-F24CB1CE9B4D}" Directory_="net35_1_Dir" Attributes="0" KeyPath="BasicPageDragandDrop.exe"/>
     <ROW Component="BasicPageDragandDrop.exe_1" ComponentId="{D40A78FB-BDF9-45C3-9F31-403C5F01B08A}" Directory_="net45_1_Dir" Attributes="0" KeyPath="BasicPageDragandDrop.exe_1"/>
     <ROW Component="BasicPageDragandDrop.exe_10" ComponentId="{BAC2E4BC-57F7-4FFB-84B9-DB0D211FBA53}" Directory_="net48_1_Dir" Attributes="0" KeyPath="BasicPageDragandDrop.exe_10"/>
-    <ROW Component="BasicPageDragandDrop.exe_11" ComponentId="{F2F5CE23-DBE6-488A-B38B-8501C4D1C3A0}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="BasicPageDragandDrop.pdb_11"/>
+    <ROW Component="BasicPageDragandDrop.exe_11" ComponentId="{F2F5CE23-DBE6-488A-B38B-8501C4D1C3A0}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="BasicPageDragandDrop.pdb_11" Type="4"/>
     <ROW Component="BasicPageDragandDrop.exe_12" ComponentId="{5C157F37-FE15-4B90-8D25-E845B9193643}" Directory_="netcoreapp3.1_1_Dir" Attributes="256" KeyPath="BasicPageDragandDrop.exe_12"/>
     <ROW Component="BasicPageDragandDrop.exe_13" ComponentId="{73ED2C33-5FB8-4079-B710-8BC345D09700}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="BasicPageDragandDrop.exe_11"/>
     <ROW Component="BasicPageDragandDrop.exe_2" ComponentId="{8E94CE78-C952-42A8-A381-385A4D325506}" Directory_="net451_1_Dir" Attributes="0" KeyPath="BasicPageDragandDrop.exe_2"/>
@@ -243,7 +247,7 @@
     <ROW Component="ButtonSpecPlayground.exe" ComponentId="{B0753764-9976-44D2-871D-6FF497B025B7}" Directory_="net35_1_Dir" Attributes="0" KeyPath="ButtonSpecPlayground.exe"/>
     <ROW Component="ButtonSpecPlayground.exe_1" ComponentId="{E5DDA839-6CAB-4C98-83D1-A392B38A41DB}" Directory_="net45_1_Dir" Attributes="0" KeyPath="ButtonSpecPlayground.exe_1"/>
     <ROW Component="ButtonSpecPlayground.exe_10" ComponentId="{48D416B4-F02F-49EB-A3D0-816A2E833E1A}" Directory_="net48_1_Dir" Attributes="0" KeyPath="ButtonSpecPlayground.exe_10"/>
-    <ROW Component="ButtonSpecPlayground.exe_11" ComponentId="{8B25CB01-151C-418F-B1C1-D7D203B13753}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="ButtonSpecPlayground.pdb_11"/>
+    <ROW Component="ButtonSpecPlayground.exe_11" ComponentId="{8B25CB01-151C-418F-B1C1-D7D203B13753}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="ButtonSpecPlayground.pdb_11" Type="4"/>
     <ROW Component="ButtonSpecPlayground.exe_12" ComponentId="{290017B3-5A2B-4863-A3D0-85659630984F}" Directory_="netcoreapp3.1_1_Dir" Attributes="256" KeyPath="ButtonSpecPlayground.exe_12"/>
     <ROW Component="ButtonSpecPlayground.exe_13" ComponentId="{96521AC6-9D48-44B0-B52E-2E5A9D509FFB}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="ButtonSpecPlayground.exe_11"/>
     <ROW Component="ButtonSpecPlayground.exe_2" ComponentId="{D439E080-6B50-4491-AA14-B7D96BD3E6D3}" Directory_="net451_1_Dir" Attributes="0" KeyPath="ButtonSpecPlayground.exe_2"/>
@@ -306,7 +310,7 @@
     <ROW Component="ContextualTabs.exe" ComponentId="{EEE3CB78-6FE7-4F22-9BB2-8470A82AF5AF}" Directory_="net35_1_Dir" Attributes="0" KeyPath="ContextualTabs.exe"/>
     <ROW Component="ContextualTabs.exe_1" ComponentId="{CC7A8B8E-23DF-46C5-8DEB-AC0C16150F57}" Directory_="net45_1_Dir" Attributes="0" KeyPath="ContextualTabs.exe_1"/>
     <ROW Component="ContextualTabs.exe_10" ComponentId="{E331DE80-084F-4294-83FF-7CDB34402E23}" Directory_="net48_1_Dir" Attributes="0" KeyPath="ContextualTabs.exe_10"/>
-    <ROW Component="ContextualTabs.exe_11" ComponentId="{5E870E6D-75E1-4A3D-8FEA-BDCF9649C2C5}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="ContextualTabs.pdb_11"/>
+    <ROW Component="ContextualTabs.exe_11" ComponentId="{5E870E6D-75E1-4A3D-8FEA-BDCF9649C2C5}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="ContextualTabs.pdb_11" Type="4"/>
     <ROW Component="ContextualTabs.exe_12" ComponentId="{C51418A5-96A7-4C9F-AC2B-27883F5F3BC7}" Directory_="netcoreapp3.1_1_Dir" Attributes="256" KeyPath="ContextualTabs.exe_12"/>
     <ROW Component="ContextualTabs.exe_13" ComponentId="{7888AD78-8AE8-4E12-8AE2-2A83F18C388E}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="ContextualTabs.exe_11"/>
     <ROW Component="ContextualTabs.exe_2" ComponentId="{43F696E4-3A48-4278-A718-D596B9EA80F2}" Directory_="net451_1_Dir" Attributes="0" KeyPath="ContextualTabs.exe_2"/>
@@ -327,7 +331,7 @@
     <ROW Component="CustomControlUsingPalettes.exe" ComponentId="{E896E37C-7834-410C-94BC-1B9F0CB954DD}" Directory_="net35_1_Dir" Attributes="0" KeyPath="CustomControlUsingPalettes.exe"/>
     <ROW Component="CustomControlUsingPalettes.exe_1" ComponentId="{820F3D14-8B84-46F8-BBE9-2067EE4780A4}" Directory_="net45_1_Dir" Attributes="0" KeyPath="CustomControlUsingPalettes.exe_1"/>
     <ROW Component="CustomControlUsingPalettes.exe_10" ComponentId="{58DB58E6-C752-4E5F-9FD2-956CA6060608}" Directory_="net48_1_Dir" Attributes="0" KeyPath="CustomControlUsingPalettes.exe_10"/>
-    <ROW Component="CustomControlUsingPalettes.exe_11" ComponentId="{08F66E00-1F96-4E31-A5B8-09E851EA4FB7}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="CustomControlUsingPalettes.pdb_11"/>
+    <ROW Component="CustomControlUsingPalettes.exe_11" ComponentId="{08F66E00-1F96-4E31-A5B8-09E851EA4FB7}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="CustomControlUsingPalettes.pdb_11" Type="4"/>
     <ROW Component="CustomControlUsingPalettes.exe_12" ComponentId="{77A6EF62-64F6-4715-A0DD-92C7378DA223}" Directory_="netcoreapp3.1_1_Dir" Attributes="256" KeyPath="CustomControlUsingPalettes.exe_12"/>
     <ROW Component="CustomControlUsingPalettes.exe_13" ComponentId="{098F9170-2CCC-4A20-8A95-901C415D6066}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="CustomControlUsingPalettes.exe_11"/>
     <ROW Component="CustomControlUsingPalettes.exe_2" ComponentId="{8FDC74E8-D836-4BC8-B5A4-12EA095BD0ED}" Directory_="net451_1_Dir" Attributes="0" KeyPath="CustomControlUsingPalettes.exe_2"/>
@@ -348,7 +352,7 @@
     <ROW Component="CustomControlUsingRenderers.exe" ComponentId="{0396BC92-808A-4BC6-A92E-E87788910558}" Directory_="net35_1_Dir" Attributes="0" KeyPath="CustomControlUsingRenderers.exe"/>
     <ROW Component="CustomControlUsingRenderers.exe_1" ComponentId="{994DB3A1-EE18-4A1E-99C8-C65C0B90C66D}" Directory_="net45_1_Dir" Attributes="0" KeyPath="CustomControlUsingRenderers.exe_1"/>
     <ROW Component="CustomControlUsingRenderers.exe_10" ComponentId="{2242D534-E7A0-41BB-AAB6-8A7DC8C49D43}" Directory_="net48_1_Dir" Attributes="0" KeyPath="CustomControlUsingRenderers.exe_10"/>
-    <ROW Component="CustomControlUsingRenderers.exe_11" ComponentId="{A990A36E-4D6D-457F-9E1C-D5DF68520189}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="CustomControlUsingRenderers.pdb_11"/>
+    <ROW Component="CustomControlUsingRenderers.exe_11" ComponentId="{A990A36E-4D6D-457F-9E1C-D5DF68520189}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="CustomControlUsingRenderers.pdb_11" Type="4"/>
     <ROW Component="CustomControlUsingRenderers.exe_12" ComponentId="{52593BCA-F16F-4E3B-BDD4-C6E5D43AE95D}" Directory_="netcoreapp3.1_1_Dir" Attributes="256" KeyPath="CustomControlUsingRenderers.exe_12"/>
     <ROW Component="CustomControlUsingRenderers.exe_13" ComponentId="{37BABD8D-4928-415B-9F53-ABAC25DEAFA2}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="CustomControlUsingRenderers.exe_11"/>
     <ROW Component="CustomControlUsingRenderers.exe_2" ComponentId="{D4A2BE5C-5DEA-422C-BC17-943F53A10AD8}" Directory_="net451_1_Dir" Attributes="0" KeyPath="CustomControlUsingRenderers.exe_2"/>
@@ -369,7 +373,7 @@
     <ROW Component="DockingCustomized.exe" ComponentId="{B45FD5B1-93AA-41D0-89E7-DE56228E45EC}" Directory_="net35_1_Dir" Attributes="0" KeyPath="DockingCustomized.exe"/>
     <ROW Component="DockingCustomized.exe_1" ComponentId="{1A0CC388-E37A-4AFF-AEF0-DFD2EF3565C8}" Directory_="net45_1_Dir" Attributes="0" KeyPath="DockingCustomized.exe_1"/>
     <ROW Component="DockingCustomized.exe_10" ComponentId="{E6B835BE-012A-49E7-944E-32A1B5F4F9BD}" Directory_="net48_1_Dir" Attributes="0" KeyPath="DockingCustomized.exe_10"/>
-    <ROW Component="DockingCustomized.exe_11" ComponentId="{B8104F31-7389-4D45-A722-35E9A26BE66B}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="DockingCustomized.pdb_11"/>
+    <ROW Component="DockingCustomized.exe_11" ComponentId="{B8104F31-7389-4D45-A722-35E9A26BE66B}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="DockingCustomized.pdb_11" Type="4"/>
     <ROW Component="DockingCustomized.exe_12" ComponentId="{19727FAA-DFB4-4AAD-B4E4-B247014865CB}" Directory_="netcoreapp3.1_1_Dir" Attributes="256" KeyPath="DockingCustomized.exe_12"/>
     <ROW Component="DockingCustomized.exe_13" ComponentId="{7E58D1E2-7A21-4927-830F-0CC113404184}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="DockingCustomized.exe_11"/>
     <ROW Component="DockingCustomized.exe_2" ComponentId="{9A70947F-38AC-46F1-AE7B-DB140F67090E}" Directory_="net451_1_Dir" Attributes="0" KeyPath="DockingCustomized.exe_2"/>
@@ -390,7 +394,7 @@
     <ROW Component="DockingFlags.exe" ComponentId="{8C2A4984-8BB5-4C40-A92D-EAFDA9E5250B}" Directory_="net35_1_Dir" Attributes="0" KeyPath="DockingFlags.exe"/>
     <ROW Component="DockingFlags.exe_1" ComponentId="{564A3F88-7051-4261-A894-3382C0182392}" Directory_="net45_1_Dir" Attributes="0" KeyPath="DockingFlags.exe_1"/>
     <ROW Component="DockingFlags.exe_10" ComponentId="{2B5BE098-0444-4029-ADD4-4FF995FBE71B}" Directory_="net48_1_Dir" Attributes="0" KeyPath="DockingFlags.exe_10"/>
-    <ROW Component="DockingFlags.exe_11" ComponentId="{7ACA64B4-B192-4728-BAFC-250ADBCBC05F}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="DockingFlags.pdb_11"/>
+    <ROW Component="DockingFlags.exe_11" ComponentId="{7ACA64B4-B192-4728-BAFC-250ADBCBC05F}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="DockingFlags.pdb_11" Type="4"/>
     <ROW Component="DockingFlags.exe_12" ComponentId="{D6B3D94F-AC8C-4648-BDA9-3438B650E086}" Directory_="netcoreapp3.1_1_Dir" Attributes="256" KeyPath="DockingFlags.exe_12"/>
     <ROW Component="DockingFlags.exe_13" ComponentId="{CFAE2B5F-2F02-4E39-B810-E25926B37CBA}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="DockingFlags.exe_11"/>
     <ROW Component="DockingFlags.exe_2" ComponentId="{50604F40-7BD4-4D81-A87C-8A982CC93F31}" Directory_="net451_1_Dir" Attributes="0" KeyPath="DockingFlags.exe_2"/>
@@ -411,7 +415,7 @@
     <ROW Component="DockingPersistence.exe" ComponentId="{AB228714-2271-459B-BCC4-339B8FB5E338}" Directory_="net35_1_Dir" Attributes="0" KeyPath="DockingPersistence.exe"/>
     <ROW Component="DockingPersistence.exe_1" ComponentId="{F2FA793D-974D-4493-8B44-DFCEBB55662D}" Directory_="net45_1_Dir" Attributes="0" KeyPath="DockingPersistence.exe_1"/>
     <ROW Component="DockingPersistence.exe_10" ComponentId="{EED31A37-9B71-4F40-9FC0-40A41B2C1EC9}" Directory_="net48_1_Dir" Attributes="0" KeyPath="DockingPersistence.exe_10"/>
-    <ROW Component="DockingPersistence.exe_11" ComponentId="{01B4EE2B-55B0-44EA-AA4F-E57DD3DFBFF6}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="DockingPersistence.pdb_11"/>
+    <ROW Component="DockingPersistence.exe_11" ComponentId="{01B4EE2B-55B0-44EA-AA4F-E57DD3DFBFF6}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="DockingPersistence.pdb_11" Type="4"/>
     <ROW Component="DockingPersistence.exe_12" ComponentId="{8AC03C3D-EF6C-403F-B2BD-C560E3EEEED8}" Directory_="netcoreapp3.1_1_Dir" Attributes="256" KeyPath="DockingPersistence.exe_12"/>
     <ROW Component="DockingPersistence.exe_13" ComponentId="{DC7C454D-68E8-4348-ABEE-CC4F72B9A30F}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="DockingPersistence.exe_11"/>
     <ROW Component="DockingPersistence.exe_2" ComponentId="{E830C417-ADEB-4F52-B26E-925E31D3C487}" Directory_="net451_1_Dir" Attributes="0" KeyPath="DockingPersistence.exe_2"/>
@@ -432,7 +436,7 @@
     <ROW Component="ExpandingHeaderGroupsDockStyleExamples.exe" ComponentId="{42C67DE8-AB99-470F-B1ED-F76762C61AEB}" Directory_="net35_1_Dir" Attributes="0" KeyPath="ExpandingHeaderGroupsDockStyleExamples.exe"/>
     <ROW Component="ExpandingHeaderGroupsDockStyleExamples.exe_1" ComponentId="{29ECFE99-A526-4294-95C2-A3A256E09971}" Directory_="net45_1_Dir" Attributes="0" KeyPath="ExpandingHeaderGroupsDockStyleExamples.exe_1"/>
     <ROW Component="ExpandingHeaderGroupsDockStyleExamples.exe_10" ComponentId="{6EF1B513-DEDD-4345-95BD-BCABB6502AC6}" Directory_="net48_1_Dir" Attributes="0" KeyPath="ExpandingHeaderGroupsDockStyleExamples.exe_10"/>
-    <ROW Component="ExpandingHeaderGroupsDockStyleExamples.exe_11" ComponentId="{835AC4BD-AD4F-4911-8368-B298EA4C1188}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="ExpandingHeaderGroupsDockStyleExamples.pdb_11"/>
+    <ROW Component="ExpandingHeaderGroupsDockStyleExamples.exe_11" ComponentId="{835AC4BD-AD4F-4911-8368-B298EA4C1188}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="ExpandingHeaderGroupsDockStyleExamples.pdb_11" Type="4"/>
     <ROW Component="ExpandingHeaderGroupsDockStyleExamples.exe_12" ComponentId="{ADBC161D-877C-4E7C-97F8-22476ACFB705}" Directory_="netcoreapp3.1_1_Dir" Attributes="256" KeyPath="ExpandingHeaderGroupsDockStyleExamples.exe_12"/>
     <ROW Component="ExpandingHeaderGroupsDockStyleExamples.exe_13" ComponentId="{E6751BCE-9267-49D1-8258-85857042C813}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="ExpandingHeaderGroupsDockStyleExamples.exe_11"/>
     <ROW Component="ExpandingHeaderGroupsDockStyleExamples.exe_2" ComponentId="{73F4AC7C-321B-49FF-9AA9-0224B4ECCCFF}" Directory_="net451_1_Dir" Attributes="0" KeyPath="ExpandingHeaderGroupsDockStyleExamples.exe_2"/>
@@ -453,7 +457,7 @@
     <ROW Component="ExpandingHeaderGroupsSplittersExamples.exe" ComponentId="{BC3A7473-21A3-4C57-BAFA-251419E4E956}" Directory_="net35_1_Dir" Attributes="0" KeyPath="ExpandingHeaderGroupsSplittersExamples.exe"/>
     <ROW Component="ExpandingHeaderGroupsSplittersExamples.exe_1" ComponentId="{EDA24DB2-00DE-4CED-BA19-5509FA3D858B}" Directory_="net45_1_Dir" Attributes="0" KeyPath="ExpandingHeaderGroupsSplittersExamples.exe_1"/>
     <ROW Component="ExpandingHeaderGroupsSplittersExamples.exe_10" ComponentId="{9D4F90D3-842F-4A0E-BD90-88E77C0E02B0}" Directory_="net48_1_Dir" Attributes="0" KeyPath="ExpandingHeaderGroupsSplittersExamples.exe_10"/>
-    <ROW Component="ExpandingHeaderGroupsSplittersExamples.exe_11" ComponentId="{5C1E2C40-B2B3-461A-8FC8-8E9C410B22EE}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="ExpandingHeaderGroupsSplittersExamples.pdb_11"/>
+    <ROW Component="ExpandingHeaderGroupsSplittersExamples.exe_11" ComponentId="{5C1E2C40-B2B3-461A-8FC8-8E9C410B22EE}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="ExpandingHeaderGroupsSplittersExamples.pdb_11" Type="4"/>
     <ROW Component="ExpandingHeaderGroupsSplittersExamples.exe_12" ComponentId="{5A2A57CD-0E85-4297-B858-ECDE2ADB9185}" Directory_="netcoreapp3.1_1_Dir" Attributes="256" KeyPath="ExpandingHeaderGroupsSplittersExamples.exe_12"/>
     <ROW Component="ExpandingHeaderGroupsSplittersExamples.exe_13" ComponentId="{7E6DE09C-EA71-4A90-87C4-B48B7B2F681A}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="ExpandingHeaderGroupsSplittersExamples.exe_11"/>
     <ROW Component="ExpandingHeaderGroupsSplittersExamples.exe_2" ComponentId="{08505049-0E01-41D6-95E9-EAC27A28D73E}" Directory_="net451_1_Dir" Attributes="0" KeyPath="ExpandingHeaderGroupsSplittersExamples.exe_2"/>
@@ -474,7 +478,7 @@
     <ROW Component="ExpandingHeaderGroupsStackExamples.exe" ComponentId="{FD7024BE-816D-43CC-945E-66469820E3E1}" Directory_="net35_1_Dir" Attributes="0" KeyPath="ExpandingHeaderGroupsStackExamples.exe"/>
     <ROW Component="ExpandingHeaderGroupsStackExamples.exe_1" ComponentId="{EF58EB98-F36E-47E2-AF53-4D407972FA77}" Directory_="net45_1_Dir" Attributes="0" KeyPath="ExpandingHeaderGroupsStackExamples.exe_1"/>
     <ROW Component="ExpandingHeaderGroupsStackExamples.exe_10" ComponentId="{4E98D9AB-1420-4044-922E-DF24B58EBDF7}" Directory_="net48_1_Dir" Attributes="0" KeyPath="ExpandingHeaderGroupsStackExamples.exe_10"/>
-    <ROW Component="ExpandingHeaderGroupsStackExamples.exe_11" ComponentId="{78F765D4-A4F6-4D38-8EB9-90F35C94F81D}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="ExpandingHeaderGroupsStackExamples.pdb_11"/>
+    <ROW Component="ExpandingHeaderGroupsStackExamples.exe_11" ComponentId="{78F765D4-A4F6-4D38-8EB9-90F35C94F81D}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="ExpandingHeaderGroupsStackExamples.pdb_11" Type="4"/>
     <ROW Component="ExpandingHeaderGroupsStackExamples.exe_12" ComponentId="{0D6743B2-BDD6-413D-9D6D-F0F556B22DF0}" Directory_="netcoreapp3.1_1_Dir" Attributes="256" KeyPath="ExpandingHeaderGroupsStackExamples.exe_12"/>
     <ROW Component="ExpandingHeaderGroupsStackExamples.exe_13" ComponentId="{9586EBE4-EE55-4B55-95A6-F5E0B955ED3C}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="ExpandingHeaderGroupsStackExamples.exe_11"/>
     <ROW Component="ExpandingHeaderGroupsStackExamples.exe_2" ComponentId="{C1755E0C-2B79-426D-BB36-61031230FE1A}" Directory_="net451_1_Dir" Attributes="0" KeyPath="ExpandingHeaderGroupsStackExamples.exe_2"/>
@@ -495,7 +499,7 @@
     <ROW Component="ExpandingPages.exe" ComponentId="{8F68191A-8990-46B2-B4FE-381A5BDA5520}" Directory_="net35_1_Dir" Attributes="0" KeyPath="ExpandingPages.exe"/>
     <ROW Component="ExpandingPages.exe_1" ComponentId="{AB5B0D0E-20DC-4A78-8A3B-7ACACB8B4389}" Directory_="net45_1_Dir" Attributes="0" KeyPath="ExpandingPages.exe_1"/>
     <ROW Component="ExpandingPages.exe_10" ComponentId="{9334F93D-4363-4A6C-A62E-CB2C0CA39295}" Directory_="net48_1_Dir" Attributes="0" KeyPath="ExpandingPages.exe_10"/>
-    <ROW Component="ExpandingPages.exe_11" ComponentId="{2A5587A0-7E28-4C9B-9BA5-9BB8C998D140}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="ExpandingPages.pdb_11"/>
+    <ROW Component="ExpandingPages.exe_11" ComponentId="{2A5587A0-7E28-4C9B-9BA5-9BB8C998D140}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="ExpandingPages.pdb_11" Type="4"/>
     <ROW Component="ExpandingPages.exe_12" ComponentId="{5471236C-2A11-4672-B7F4-41EF48E77958}" Directory_="netcoreapp3.1_1_Dir" Attributes="256" KeyPath="ExpandingPages.exe_12"/>
     <ROW Component="ExpandingPages.exe_13" ComponentId="{73363733-B0ED-489D-B501-029BD71D7FFA}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="ExpandingPages.exe_11"/>
     <ROW Component="ExpandingPages.exe_2" ComponentId="{0B52A549-F21A-46E3-9E16-D3EA3E2293E5}" Directory_="net451_1_Dir" Attributes="0" KeyPath="ExpandingPages.exe_2"/>
@@ -516,7 +520,7 @@
     <ROW Component="ExternalDragtoDocking.exe" ComponentId="{9E9E2537-4BC5-4D86-A15F-9A1C3776DEE3}" Directory_="net35_1_Dir" Attributes="0" KeyPath="ExternalDragtoDocking.exe"/>
     <ROW Component="ExternalDragtoDocking.exe_1" ComponentId="{F4F698EA-C62B-46B4-B8E2-B8CDDB0DD524}" Directory_="net45_1_Dir" Attributes="0" KeyPath="ExternalDragtoDocking.exe_1"/>
     <ROW Component="ExternalDragtoDocking.exe_10" ComponentId="{94FD3C12-3519-443B-905B-8AD48D02B3B6}" Directory_="net48_1_Dir" Attributes="0" KeyPath="ExternalDragtoDocking.exe_10"/>
-    <ROW Component="ExternalDragtoDocking.exe_11" ComponentId="{F39E7BA2-BEFC-4CC3-897C-EA90A3F4A861}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="ExternalDragtoDocking.pdb_11"/>
+    <ROW Component="ExternalDragtoDocking.exe_11" ComponentId="{F39E7BA2-BEFC-4CC3-897C-EA90A3F4A861}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="ExternalDragtoDocking.pdb_11" Type="4"/>
     <ROW Component="ExternalDragtoDocking.exe_12" ComponentId="{B88B080A-4B78-4D65-A29E-CF29889593B7}" Directory_="netcoreapp3.1_1_Dir" Attributes="256" KeyPath="ExternalDragtoDocking.exe_12"/>
     <ROW Component="ExternalDragtoDocking.exe_13" ComponentId="{1020017A-E8BE-43D2-8977-33D48FF2A4EB}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="ExternalDragtoDocking.exe_11"/>
     <ROW Component="ExternalDragtoDocking.exe_2" ComponentId="{9DF53F6F-30E0-46D7-BA2A-B3B13D35F16D}" Directory_="net451_1_Dir" Attributes="0" KeyPath="ExternalDragtoDocking.exe_2"/>
@@ -530,6 +534,7 @@
     <ROW Component="ExternalDragtoDocking.runtimeconfig.dev.json" ComponentId="{BF157434-0FAC-4C4E-B42F-39FBCF9CC4EB}" Directory_="net5.0windows_1_Dir" Attributes="0" KeyPath="ExternalDragtoDocking.runtimeconfig.dev.json"/>
     <ROW Component="ExternalDragtoDocking.runtimeconfig.json" ComponentId="{19B5BF93-A48D-4FA4-99A3-9E067CDE6144}" Directory_="net5.0windows_1_Dir" Attributes="0" KeyPath="ExternalDragtoDocking.runtimeconfig.json"/>
     <ROW Component="FileaBugorNewRequest.url" ComponentId="{FB2B9451-1089-4E98-9EAB-6AE982C40371}" Directory_="WebLinks_Dir" Attributes="0" KeyPath="FileaBugorNewRequest.url" Type="0"/>
+    <ROW Component="HelpLibraryManagerLauncher.exe" ComponentId="{456C61D6-E8B8-42B2-9E11-A87331BC362F}" Directory_="HelpLibrary_Dir" Attributes="0" KeyPath="HelpLibraryManagerLauncher.exe"/>
     <ROW Component="InputFormExamples.deps.json" ComponentId="{6FDEB9BF-D7D7-4D19-9D4C-B812577B02E9}" Directory_="net5.0windows_1_Dir" Attributes="0" KeyPath="InputFormExamples.deps.json"/>
     <ROW Component="InputFormExamples.dll" ComponentId="{FF1389B0-1FB7-42FC-B837-540FB7BBF9EC}" Directory_="net5.0windows_1_Dir" Attributes="0" KeyPath="InputFormExamples.dll"/>
     <ROW Component="InputFormExamples.dll.config" ComponentId="{4F2AD0FD-3FAC-4C66-B783-103CECAC425F}" Directory_="net5.0windows_1_Dir" Attributes="0" KeyPath="InputFormExamples.dll.config"/>
@@ -538,7 +543,7 @@
     <ROW Component="InputFormExamples.exe" ComponentId="{FE71BD6F-89C9-42B4-85D8-69C16D6328DC}" Directory_="net35_1_Dir" Attributes="0" KeyPath="InputFormExamples.exe"/>
     <ROW Component="InputFormExamples.exe_1" ComponentId="{84569259-E359-4CE0-B6FE-67F7827DA2B7}" Directory_="net45_1_Dir" Attributes="0" KeyPath="InputFormExamples.exe_1"/>
     <ROW Component="InputFormExamples.exe_10" ComponentId="{54A80DEA-50DC-41CE-8FB5-96C5784190C1}" Directory_="net48_1_Dir" Attributes="0" KeyPath="InputFormExamples.exe_10"/>
-    <ROW Component="InputFormExamples.exe_11" ComponentId="{75BCC206-4C14-47F5-AE03-2B3E6DBC8942}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="InputFormExamples.pdb_11"/>
+    <ROW Component="InputFormExamples.exe_11" ComponentId="{75BCC206-4C14-47F5-AE03-2B3E6DBC8942}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="InputFormExamples.pdb_11" Type="4"/>
     <ROW Component="InputFormExamples.exe_12" ComponentId="{BC82B865-A4D1-4173-868E-FFB05FDA206F}" Directory_="netcoreapp3.1_1_Dir" Attributes="256" KeyPath="InputFormExamples.exe_12"/>
     <ROW Component="InputFormExamples.exe_13" ComponentId="{826B6EBF-73E6-4B96-86D9-0112C04AC0C8}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="InputFormExamples.exe_11"/>
     <ROW Component="InputFormExamples.exe_2" ComponentId="{4AB6EF39-417D-4429-802B-8B34C0FE4CBC}" Directory_="net451_1_Dir" Attributes="0" KeyPath="InputFormExamples.exe_2"/>
@@ -551,6 +556,7 @@
     <ROW Component="InputFormExamples.exe_9" ComponentId="{F3F09876-640C-425F-BF92-674470B074F1}" Directory_="net472_1_Dir" Attributes="0" KeyPath="InputFormExamples.exe_9"/>
     <ROW Component="InputFormExamples.runtimeconfig.dev.json" ComponentId="{6E0A9CB7-C509-4681-A43F-9216F41EF073}" Directory_="net5.0windows_1_Dir" Attributes="0" KeyPath="InputFormExamples.runtimeconfig.dev.json"/>
     <ROW Component="InputFormExamples.runtimeconfig.json" ComponentId="{2C986DF1-856F-4B0A-BAF1-BBFB02F1D6C1}" Directory_="net5.0windows_1_Dir" Attributes="0" KeyPath="InputFormExamples.runtimeconfig.json"/>
+    <ROW Component="Install_StandardToolkitDocumentation.bat" ComponentId="{CEF9D230-FE72-4CEA-BE1D-512055571150}" Directory_="HelpLibrary_Dir" Attributes="0" KeyPath="Install_StandardToolkitDocumentation.bat" Type="0"/>
     <ROW Component="JoinourDiscordServer.url" ComponentId="{80B21AE7-33AC-4126-9812-EAE496517D7C}" Directory_="WebLinks_Dir" Attributes="0" KeyPath="JoinourDiscordServer.url"/>
     <ROW Component="KeyTipsandKeyboardAccess.deps.json" ComponentId="{5716813E-9692-4F68-BAD8-38B0C96BE796}" Directory_="net5.0windows_1_Dir" Attributes="0" KeyPath="KeyTipsandKeyboardAccess.deps.json"/>
     <ROW Component="KeyTipsandKeyboardAccess.dll" ComponentId="{47800409-4D90-4E24-94CA-86988CADEA9E}" Directory_="net5.0windows_1_Dir" Attributes="0" KeyPath="KeyTipsandKeyboardAccess.dll"/>
@@ -560,7 +566,7 @@
     <ROW Component="KeyTipsandKeyboardAccess.exe" ComponentId="{3ABDF4FC-F461-4DB3-9EDC-9F45D07360B4}" Directory_="net35_1_Dir" Attributes="0" KeyPath="KeyTipsandKeyboardAccess.exe"/>
     <ROW Component="KeyTipsandKeyboardAccess.exe_1" ComponentId="{86436B12-DCC5-404A-9FAA-598ED0F2E93E}" Directory_="net45_1_Dir" Attributes="0" KeyPath="KeyTipsandKeyboardAccess.exe_1"/>
     <ROW Component="KeyTipsandKeyboardAccess.exe_10" ComponentId="{8239B920-4FD9-4925-8790-9CBC15FDB2F2}" Directory_="net48_1_Dir" Attributes="0" KeyPath="KeyTipsandKeyboardAccess.exe_10"/>
-    <ROW Component="KeyTipsandKeyboardAccess.exe_11" ComponentId="{BCD3B6EF-C2F6-4F1A-A45F-4B5A6C07ED69}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="KeyTipsandKeyboardAccess.pdb_11"/>
+    <ROW Component="KeyTipsandKeyboardAccess.exe_11" ComponentId="{BCD3B6EF-C2F6-4F1A-A45F-4B5A6C07ED69}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="KeyTipsandKeyboardAccess.pdb_11" Type="4"/>
     <ROW Component="KeyTipsandKeyboardAccess.exe_12" ComponentId="{782AEFFC-8E86-42BA-9403-B6D1D7B27940}" Directory_="netcoreapp3.1_1_Dir" Attributes="256" KeyPath="KeyTipsandKeyboardAccess.exe_12"/>
     <ROW Component="KeyTipsandKeyboardAccess.exe_13" ComponentId="{AB912EC5-9A7B-4FAC-B6CA-6D385AD91051}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="KeyTipsandKeyboardAccess.exe_11"/>
     <ROW Component="KeyTipsandKeyboardAccess.exe_2" ComponentId="{832B3001-F8D2-4BDE-B409-1F8CD0D7BBC7}" Directory_="net451_1_Dir" Attributes="0" KeyPath="KeyTipsandKeyboardAccess.exe_2"/>
@@ -575,6 +581,7 @@
     <ROW Component="KeyTipsandKeyboardAccess.runtimeconfig.json" ComponentId="{36885D18-50DE-4E8D-B46E-2F68E89F504A}" Directory_="net5.0windows_1_Dir" Attributes="0" KeyPath="KeyTipsandKeyboardAccess.runtimeconfig.json"/>
     <ROW Component="Krypton.Docking.deps.json" ComponentId="{02A3CA64-4599-4B65-B4F4-745C383CD6F7}" Directory_="net5.0windows_Dir" Attributes="0" KeyPath="Krypton.Docking.deps.json" Type="0"/>
     <ROW Component="Krypton.Docking.deps.json_1" ComponentId="{7B452155-19B3-41F4-BDB2-261CD0006E2F}" Directory_="netcoreapp3.1_Dir" Attributes="0" KeyPath="Krypton.Docking.deps.json_1" Type="0"/>
+    <ROW Component="Krypton.Docking.deps.json_2" ComponentId="{DE3F326E-B954-47EE-886E-CB21D8DA48D9}" Directory_="netcoreapp3.0_Dir" Attributes="0" KeyPath="Krypton.Docking.deps.json_2" Type="0"/>
     <ROW Component="Krypton.Docking.dll" ComponentId="{635CBDD8-90B1-410B-A74F-4B7ABE19D116}" Directory_="net35_Dir" Attributes="0" KeyPath="Krypton.Docking.dll"/>
     <ROW Component="Krypton.Docking.dll_1" ComponentId="{336021A2-48F2-4915-8130-D05E8940D26B}" Directory_="net40_Dir" Attributes="0" KeyPath="Krypton.Docking.dll_1"/>
     <ROW Component="Krypton.Docking.dll_10" ComponentId="{1BC94728-23F5-4E91-87CC-4C0046F2D395}" Directory_="net472_Dir" Attributes="0" KeyPath="Krypton.Docking.dll_10"/>
@@ -596,6 +603,7 @@
     <ROW Component="Krypton.Docking.dll_25" ComponentId="{7793DF05-E62D-46D2-A1C5-64CFA4320665}" Directory_="net48_1_Dir" Attributes="0" KeyPath="Krypton.Docking.dll_25"/>
     <ROW Component="Krypton.Docking.dll_26" ComponentId="{972A6EF1-1416-49DC-8B9A-15438F3C32AE}" Directory_="net5.0windows_1_Dir" Attributes="0" KeyPath="Krypton.Docking.dll_26"/>
     <ROW Component="Krypton.Docking.dll_27" ComponentId="{2AEAFC93-3D6C-4698-B7A4-287D3714AB7F}" Directory_="netcoreapp3.1_1_Dir" Attributes="0" KeyPath="Krypton.Docking.dll_27"/>
+    <ROW Component="Krypton.Docking.dll_28" ComponentId="{FFC9C2A6-1A4E-43CD-9FC9-D4A25846A373}" Directory_="netcoreapp3.0_Dir" Attributes="0" KeyPath="Krypton.Docking.dll_28"/>
     <ROW Component="Krypton.Docking.dll_3" ComponentId="{838E866C-007F-42B5-AFFA-146187B77728}" Directory_="net451_Dir" Attributes="0" KeyPath="Krypton.Docking.dll_3"/>
     <ROW Component="Krypton.Docking.dll_4" ComponentId="{5265D2ED-DFD5-48E3-AB8F-01B7C91F52E5}" Directory_="net452_Dir" Attributes="0" KeyPath="Krypton.Docking.dll_4"/>
     <ROW Component="Krypton.Docking.dll_5" ComponentId="{7BA1ECD9-E19C-4EB8-BFFB-1573650CEB84}" Directory_="net46_Dir" Attributes="0" KeyPath="Krypton.Docking.dll_5"/>
@@ -636,6 +644,7 @@
     <ROW Component="Krypton.Navigator.dll_25" ComponentId="{F5F7D8F4-1D15-4628-B5E1-36970357A3B1}" Directory_="net48_1_Dir" Attributes="0" KeyPath="Krypton.Navigator.dll_25"/>
     <ROW Component="Krypton.Navigator.dll_26" ComponentId="{488ADFA7-67B6-437E-992A-89EAB69AB116}" Directory_="net5.0windows_1_Dir" Attributes="0" KeyPath="Krypton.Navigator.dll_26"/>
     <ROW Component="Krypton.Navigator.dll_27" ComponentId="{BF900F91-F506-43C7-BAC8-7453D5AE4F64}" Directory_="netcoreapp3.1_1_Dir" Attributes="0" KeyPath="Krypton.Navigator.dll_27"/>
+    <ROW Component="Krypton.Navigator.dll_28" ComponentId="{0228905B-7356-41A9-8553-08682F80CAFB}" Directory_="netcoreapp3.0_Dir" Attributes="0" KeyPath="Krypton.Navigator.dll_28"/>
     <ROW Component="Krypton.Navigator.dll_3" ComponentId="{84575F11-5C52-4A81-8604-E5CC62E7FAFB}" Directory_="net451_Dir" Attributes="0" KeyPath="Krypton.Navigator.dll_3"/>
     <ROW Component="Krypton.Navigator.dll_4" ComponentId="{A27A1568-9CE9-4157-B780-DF418B8E3ECF}" Directory_="net452_Dir" Attributes="0" KeyPath="Krypton.Navigator.dll_4"/>
     <ROW Component="Krypton.Navigator.dll_5" ComponentId="{EA25C6B1-2F7F-471C-9E5B-D0BCCF5C8C59}" Directory_="net46_Dir" Attributes="0" KeyPath="Krypton.Navigator.dll_5"/>
@@ -692,6 +701,7 @@
     <ROW Component="Krypton.Toolkit.dll_25" ComponentId="{E0437AA9-ACFE-4BCF-9A01-02378EB1DC45}" Directory_="net48_1_Dir" Attributes="0" KeyPath="Krypton.Toolkit.dll_25"/>
     <ROW Component="Krypton.Toolkit.dll_26" ComponentId="{C881AC4C-7286-4A0A-9126-78BDAAB61D24}" Directory_="net5.0windows_1_Dir" Attributes="0" KeyPath="Krypton.Toolkit.dll_26"/>
     <ROW Component="Krypton.Toolkit.dll_27" ComponentId="{B697F64E-EAAF-4FAB-A29A-800972DB098A}" Directory_="netcoreapp3.1_1_Dir" Attributes="0" KeyPath="Krypton.Toolkit.dll_27"/>
+    <ROW Component="Krypton.Toolkit.dll_28" ComponentId="{8AB3AE98-6328-424B-A4EC-611383444882}" Directory_="netcoreapp3.0_Dir" Attributes="0" KeyPath="Krypton.Toolkit.dll_28"/>
     <ROW Component="Krypton.Toolkit.dll_3" ComponentId="{4DB04A7B-11C7-4605-B99D-B84A327AC9BF}" Directory_="net451_Dir" Attributes="0" KeyPath="Krypton.Toolkit.dll_3"/>
     <ROW Component="Krypton.Toolkit.dll_4" ComponentId="{D5ABCBB2-651C-4796-84B9-DBD312EABF3F}" Directory_="net452_Dir" Attributes="0" KeyPath="Krypton.Toolkit.dll_4"/>
     <ROW Component="Krypton.Toolkit.dll_5" ComponentId="{00386E80-EEBC-4605-8B2F-A13402205BC5}" Directory_="net46_Dir" Attributes="0" KeyPath="Krypton.Toolkit.dll_5"/>
@@ -720,6 +730,7 @@
     <ROW Component="Krypton.Workspace.dll_25" ComponentId="{C672F4B6-FD8D-4BFF-BABC-F8805375652F}" Directory_="net48_1_Dir" Attributes="0" KeyPath="Krypton.Workspace.dll_25"/>
     <ROW Component="Krypton.Workspace.dll_26" ComponentId="{871C8BBD-0F69-4F83-9D1E-9E629BEA851C}" Directory_="net5.0windows_1_Dir" Attributes="0" KeyPath="Krypton.Workspace.dll_26"/>
     <ROW Component="Krypton.Workspace.dll_27" ComponentId="{B83BBF0E-CE9D-4AF2-A9F1-071D340A3EB4}" Directory_="netcoreapp3.1_1_Dir" Attributes="0" KeyPath="Krypton.Workspace.dll_27"/>
+    <ROW Component="Krypton.Workspace.dll_28" ComponentId="{9F8F04AF-97B5-475E-AE46-FE42A8B0A19F}" Directory_="netcoreapp3.0_Dir" Attributes="0" KeyPath="Krypton.Workspace.dll_28"/>
     <ROW Component="Krypton.Workspace.dll_3" ComponentId="{88E7BD25-7814-4243-B634-5F7EB94A5197}" Directory_="net451_Dir" Attributes="0" KeyPath="Krypton.Workspace.dll_3"/>
     <ROW Component="Krypton.Workspace.dll_4" ComponentId="{DAF25C47-E8C2-4E3F-86AA-8F1F3BC32A3E}" Directory_="net452_Dir" Attributes="0" KeyPath="Krypton.Workspace.dll_4"/>
     <ROW Component="Krypton.Workspace.dll_5" ComponentId="{D82DBC00-5031-4A51-ADCD-AE97B86C2FC6}" Directory_="net46_Dir" Attributes="0" KeyPath="Krypton.Workspace.dll_5"/>
@@ -735,7 +746,7 @@
     <ROW Component="KryptonBorderEdgeExamples.exe" ComponentId="{079BC9BC-B47F-4294-B2E1-A9A293506853}" Directory_="net35_1_Dir" Attributes="0" KeyPath="KryptonBorderEdgeExamples.exe"/>
     <ROW Component="KryptonBorderEdgeExamples.exe_1" ComponentId="{C27F8E62-BF59-430A-A2D4-E46485D56631}" Directory_="net45_1_Dir" Attributes="0" KeyPath="KryptonBorderEdgeExamples.exe_1"/>
     <ROW Component="KryptonBorderEdgeExamples.exe_10" ComponentId="{96FBCDA1-D6D6-421C-92A1-FBD1AEAEC57F}" Directory_="net48_1_Dir" Attributes="0" KeyPath="KryptonBorderEdgeExamples.exe_10"/>
-    <ROW Component="KryptonBorderEdgeExamples.exe_11" ComponentId="{C2BC1C68-BD4F-489E-943E-8834B7473B93}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="KryptonBorderEdgeExamples.pdb_11"/>
+    <ROW Component="KryptonBorderEdgeExamples.exe_11" ComponentId="{C2BC1C68-BD4F-489E-943E-8834B7473B93}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="KryptonBorderEdgeExamples.pdb_11" Type="4"/>
     <ROW Component="KryptonBorderEdgeExamples.exe_12" ComponentId="{CCF50C0D-9558-45B3-ACE9-90C339A02825}" Directory_="netcoreapp3.1_1_Dir" Attributes="256" KeyPath="KryptonBorderEdgeExamples.exe_12"/>
     <ROW Component="KryptonBorderEdgeExamples.exe_13" ComponentId="{F5DA32C3-4296-48BD-8C3F-762F48387216}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="KryptonBorderEdgeExamples.exe_11"/>
     <ROW Component="KryptonBorderEdgeExamples.exe_2" ComponentId="{23D476E2-49F3-4AFD-A718-06AF044C71DE}" Directory_="net451_1_Dir" Attributes="0" KeyPath="KryptonBorderEdgeExamples.exe_2"/>
@@ -756,7 +767,7 @@
     <ROW Component="KryptonBreadCrumbExamples.exe" ComponentId="{A625DE5F-9186-4B50-B022-79BFDAADF421}" Directory_="net35_1_Dir" Attributes="0" KeyPath="KryptonBreadCrumbExamples.exe"/>
     <ROW Component="KryptonBreadCrumbExamples.exe_1" ComponentId="{2F3E2CA2-28FD-4127-A50F-1B30269DDBCF}" Directory_="net45_1_Dir" Attributes="0" KeyPath="KryptonBreadCrumbExamples.exe_1"/>
     <ROW Component="KryptonBreadCrumbExamples.exe_10" ComponentId="{DA4F29E8-4D75-4CDF-A0F9-CD736E4AABE2}" Directory_="net48_1_Dir" Attributes="0" KeyPath="KryptonBreadCrumbExamples.exe_10"/>
-    <ROW Component="KryptonBreadCrumbExamples.exe_11" ComponentId="{0860E9F8-42F4-4609-BB20-7A57846DF331}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="KryptonBreadCrumbExamples.pdb_11"/>
+    <ROW Component="KryptonBreadCrumbExamples.exe_11" ComponentId="{0860E9F8-42F4-4609-BB20-7A57846DF331}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="KryptonBreadCrumbExamples.pdb_11" Type="4"/>
     <ROW Component="KryptonBreadCrumbExamples.exe_12" ComponentId="{8A50BC0E-8A39-448A-9065-8FDFB068A28F}" Directory_="netcoreapp3.1_1_Dir" Attributes="256" KeyPath="KryptonBreadCrumbExamples.exe_12"/>
     <ROW Component="KryptonBreadCrumbExamples.exe_13" ComponentId="{41F9BDCB-E855-4984-A32C-21F601F9DB07}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="KryptonBreadCrumbExamples.exe_11"/>
     <ROW Component="KryptonBreadCrumbExamples.exe_2" ComponentId="{20D1A057-D55B-4581-A29F-B0B00C188DA9}" Directory_="net451_1_Dir" Attributes="0" KeyPath="KryptonBreadCrumbExamples.exe_2"/>
@@ -798,7 +809,7 @@
     <ROW Component="KryptonCheckButtonExamples.exe" ComponentId="{A00A467B-3370-4F35-AB2D-D44FF27DBF8A}" Directory_="net35_1_Dir" Attributes="0" KeyPath="KryptonCheckButtonExamples.exe"/>
     <ROW Component="KryptonCheckButtonExamples.exe_1" ComponentId="{CD3EC353-36C4-4D44-955D-4B48C7BED750}" Directory_="net45_1_Dir" Attributes="0" KeyPath="KryptonCheckButtonExamples.exe_1"/>
     <ROW Component="KryptonCheckButtonExamples.exe_10" ComponentId="{69378BDB-148A-4464-AA89-CBB2D56ACDC7}" Directory_="net48_1_Dir" Attributes="0" KeyPath="KryptonCheckButtonExamples.exe_10"/>
-    <ROW Component="KryptonCheckButtonExamples.exe_11" ComponentId="{65169BAE-ED31-40A7-988E-BEB9AD34D437}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="KryptonCheckButtonExamples.pdb_11"/>
+    <ROW Component="KryptonCheckButtonExamples.exe_11" ComponentId="{65169BAE-ED31-40A7-988E-BEB9AD34D437}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="KryptonCheckButtonExamples.pdb_11" Type="4"/>
     <ROW Component="KryptonCheckButtonExamples.exe_12" ComponentId="{AE6DF3D5-094B-4735-B1FA-CABB7FCF6E8A}" Directory_="netcoreapp3.1_1_Dir" Attributes="256" KeyPath="KryptonCheckButtonExamples.exe_12"/>
     <ROW Component="KryptonCheckButtonExamples.exe_13" ComponentId="{6A1A9DD6-2F02-46E9-98AA-9F89BF1B04DF}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="KryptonCheckButtonExamples.exe_11"/>
     <ROW Component="KryptonCheckButtonExamples.exe_2" ComponentId="{6A82D93C-28E6-40F7-ADB7-516B94BDA8AF}" Directory_="net451_1_Dir" Attributes="0" KeyPath="KryptonCheckButtonExamples.exe_2"/>
@@ -840,7 +851,7 @@
     <ROW Component="KryptonCheckboxExamples.exe" ComponentId="{27E3D417-7D9C-4845-9CBB-54D1842D59D4}" Directory_="net35_1_Dir" Attributes="0" KeyPath="KryptonCheckboxExamples.exe"/>
     <ROW Component="KryptonCheckboxExamples.exe_1" ComponentId="{4E385846-FD93-4AD3-9658-A5E4C4E86974}" Directory_="net45_1_Dir" Attributes="0" KeyPath="KryptonCheckboxExamples.exe_1"/>
     <ROW Component="KryptonCheckboxExamples.exe_10" ComponentId="{BEC27877-76D2-4F86-A002-2BBCEDA138D0}" Directory_="net48_1_Dir" Attributes="0" KeyPath="KryptonCheckboxExamples.exe_10"/>
-    <ROW Component="KryptonCheckboxExamples.exe_11" ComponentId="{EE268FC0-383C-4D8C-867A-F0DD2533C300}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="KryptonCheckboxExamples.pdb_11"/>
+    <ROW Component="KryptonCheckboxExamples.exe_11" ComponentId="{EE268FC0-383C-4D8C-867A-F0DD2533C300}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="KryptonCheckboxExamples.pdb_11" Type="4"/>
     <ROW Component="KryptonCheckboxExamples.exe_12" ComponentId="{0E18149C-DE85-4C5E-9D7C-60774EF8272A}" Directory_="netcoreapp3.1_1_Dir" Attributes="256" KeyPath="KryptonCheckboxExamples.exe_12"/>
     <ROW Component="KryptonCheckboxExamples.exe_13" ComponentId="{8D081A69-616A-4F19-A7F5-45A6EBC7E982}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="KryptonCheckboxExamples.exe_11"/>
     <ROW Component="KryptonCheckboxExamples.exe_2" ComponentId="{FDAF5D6D-6320-42F1-9CC1-9323AC267884}" Directory_="net451_1_Dir" Attributes="0" KeyPath="KryptonCheckboxExamples.exe_2"/>
@@ -861,7 +872,7 @@
     <ROW Component="KryptonCheckedListBoxExamples.exe" ComponentId="{7C031E74-3554-40FD-80B0-E55C5ACB42EC}" Directory_="net35_1_Dir" Attributes="0" KeyPath="KryptonCheckedListBoxExamples.exe"/>
     <ROW Component="KryptonCheckedListBoxExamples.exe_1" ComponentId="{34D99C76-F8AE-49A5-AF1F-E72797D4BBCA}" Directory_="net45_1_Dir" Attributes="0" KeyPath="KryptonCheckedListBoxExamples.exe_1"/>
     <ROW Component="KryptonCheckedListBoxExamples.exe_10" ComponentId="{BE32DFC8-5799-4449-A04F-CFFFE4B26B57}" Directory_="net48_1_Dir" Attributes="0" KeyPath="KryptonCheckedListBoxExamples.exe_10"/>
-    <ROW Component="KryptonCheckedListBoxExamples.exe_11" ComponentId="{4AC11C82-0765-4E40-BD65-5853114923CE}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="KryptonCheckedListBoxExamples.pdb_11"/>
+    <ROW Component="KryptonCheckedListBoxExamples.exe_11" ComponentId="{4AC11C82-0765-4E40-BD65-5853114923CE}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="KryptonCheckedListBoxExamples.pdb_11" Type="4"/>
     <ROW Component="KryptonCheckedListBoxExamples.exe_12" ComponentId="{DA84589E-A917-41ED-9E0C-270BD19A3DC6}" Directory_="netcoreapp3.1_1_Dir" Attributes="256" KeyPath="KryptonCheckedListBoxExamples.exe_12"/>
     <ROW Component="KryptonCheckedListBoxExamples.exe_13" ComponentId="{931137A0-A7F2-4A55-A675-EEFA5AB339CB}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="KryptonCheckedListBoxExamples.exe_11"/>
     <ROW Component="KryptonCheckedListBoxExamples.exe_2" ComponentId="{5A8B2549-7EA3-4780-A622-908DB98B7CD2}" Directory_="net451_1_Dir" Attributes="0" KeyPath="KryptonCheckedListBoxExamples.exe_2"/>
@@ -882,7 +893,7 @@
     <ROW Component="KryptonColorButtonExamples.exe" ComponentId="{6518F1E2-01B0-4C5F-AC7B-F7DA957522BC}" Directory_="net35_1_Dir" Attributes="0" KeyPath="KryptonColorButtonExamples.exe"/>
     <ROW Component="KryptonColorButtonExamples.exe_1" ComponentId="{1359794B-0555-43A6-BE18-556A7936BC46}" Directory_="net45_1_Dir" Attributes="0" KeyPath="KryptonColorButtonExamples.exe_1"/>
     <ROW Component="KryptonColorButtonExamples.exe_10" ComponentId="{B35A09EF-4B64-4545-987D-1B99FDF6B90F}" Directory_="net48_1_Dir" Attributes="0" KeyPath="KryptonColorButtonExamples.exe_10"/>
-    <ROW Component="KryptonColorButtonExamples.exe_11" ComponentId="{DA7D25F3-468E-453F-B6B3-1BAA66EE4EB2}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="KryptonColorButtonExamples.pdb_11"/>
+    <ROW Component="KryptonColorButtonExamples.exe_11" ComponentId="{DA7D25F3-468E-453F-B6B3-1BAA66EE4EB2}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="KryptonColorButtonExamples.pdb_11" Type="4"/>
     <ROW Component="KryptonColorButtonExamples.exe_12" ComponentId="{FD223CBE-DB93-4091-9F9F-9851E62B7B81}" Directory_="netcoreapp3.1_1_Dir" Attributes="256" KeyPath="KryptonColorButtonExamples.exe_12"/>
     <ROW Component="KryptonColorButtonExamples.exe_13" ComponentId="{F3C139E7-E9E1-4743-A5FF-12CD43EDF71E}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="KryptonColorButtonExamples.exe_11"/>
     <ROW Component="KryptonColorButtonExamples.exe_2" ComponentId="{06597CE6-D782-4804-8B32-B19A200093EF}" Directory_="net451_1_Dir" Attributes="0" KeyPath="KryptonColorButtonExamples.exe_2"/>
@@ -903,7 +914,7 @@
     <ROW Component="KryptonComboBoxExamples.exe" ComponentId="{B8FA896F-CE36-48B4-B6EB-8FDD1B457A22}" Directory_="net35_1_Dir" Attributes="0" KeyPath="KryptonComboBoxExamples.exe"/>
     <ROW Component="KryptonComboBoxExamples.exe_1" ComponentId="{119DC0D8-1151-48F1-A2FF-127FAB113363}" Directory_="net45_1_Dir" Attributes="0" KeyPath="KryptonComboBoxExamples.exe_1"/>
     <ROW Component="KryptonComboBoxExamples.exe_10" ComponentId="{09B99C14-F69F-4A58-872C-2A79E65EEA9D}" Directory_="net48_1_Dir" Attributes="0" KeyPath="KryptonComboBoxExamples.exe_10"/>
-    <ROW Component="KryptonComboBoxExamples.exe_11" ComponentId="{6AD75E91-2FE4-482B-8A50-7942DB22196A}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="KryptonComboBoxExamples.pdb_11"/>
+    <ROW Component="KryptonComboBoxExamples.exe_11" ComponentId="{6AD75E91-2FE4-482B-8A50-7942DB22196A}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="KryptonComboBoxExamples.pdb_11" Type="4"/>
     <ROW Component="KryptonComboBoxExamples.exe_12" ComponentId="{575D8AC3-2DE8-426A-A359-9C734D21C473}" Directory_="netcoreapp3.1_1_Dir" Attributes="256" KeyPath="KryptonComboBoxExamples.exe_12"/>
     <ROW Component="KryptonComboBoxExamples.exe_13" ComponentId="{7E19438D-D636-482C-BFE1-8B897B011EBF}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="KryptonComboBoxExamples.exe_11"/>
     <ROW Component="KryptonComboBoxExamples.exe_2" ComponentId="{EC63DFD3-D5FD-4C8F-9346-26D105EAA87D}" Directory_="net451_1_Dir" Attributes="0" KeyPath="KryptonComboBoxExamples.exe_2"/>
@@ -924,7 +935,7 @@
     <ROW Component="KryptonCommandExamples.exe" ComponentId="{8134D122-4204-4189-87F0-4FF5FE82AC1B}" Directory_="net35_1_Dir" Attributes="0" KeyPath="KryptonCommandExamples.exe"/>
     <ROW Component="KryptonCommandExamples.exe_1" ComponentId="{78A669ED-8DC8-489A-A74D-A7AF14C07ADC}" Directory_="net45_1_Dir" Attributes="0" KeyPath="KryptonCommandExamples.exe_1"/>
     <ROW Component="KryptonCommandExamples.exe_10" ComponentId="{8F11C4BC-563C-4D3F-A747-608171C736E2}" Directory_="net48_1_Dir" Attributes="0" KeyPath="KryptonCommandExamples.exe_10"/>
-    <ROW Component="KryptonCommandExamples.exe_11" ComponentId="{8637AAA5-76C7-4552-A111-FC19F0CCC438}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="KryptonCommandExamples.pdb_11"/>
+    <ROW Component="KryptonCommandExamples.exe_11" ComponentId="{8637AAA5-76C7-4552-A111-FC19F0CCC438}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="KryptonCommandExamples.pdb_11" Type="4"/>
     <ROW Component="KryptonCommandExamples.exe_12" ComponentId="{1C4D68E4-BDA4-47A6-A721-A245B40A821E}" Directory_="netcoreapp3.1_1_Dir" Attributes="256" KeyPath="KryptonCommandExamples.exe_12"/>
     <ROW Component="KryptonCommandExamples.exe_13" ComponentId="{96E21783-9694-4DE7-BEFC-4905662B58D5}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="KryptonCommandExamples.exe_11"/>
     <ROW Component="KryptonCommandExamples.exe_2" ComponentId="{22A4B71F-3209-4264-8EA7-2C9E670EA35E}" Directory_="net451_1_Dir" Attributes="0" KeyPath="KryptonCommandExamples.exe_2"/>
@@ -945,7 +956,7 @@
     <ROW Component="KryptonContextMenuExamples.exe" ComponentId="{E6122942-ADE9-4909-895B-235E5BCF3D9C}" Directory_="net35_1_Dir" Attributes="0" KeyPath="KryptonContextMenuExamples.exe"/>
     <ROW Component="KryptonContextMenuExamples.exe_1" ComponentId="{43F41A73-89FA-4DF5-92E4-99CEAA691E97}" Directory_="net45_1_Dir" Attributes="0" KeyPath="KryptonContextMenuExamples.exe_1"/>
     <ROW Component="KryptonContextMenuExamples.exe_10" ComponentId="{6CD10036-A779-44FA-8F54-03DB8C83AE48}" Directory_="net48_1_Dir" Attributes="0" KeyPath="KryptonContextMenuExamples.exe_10"/>
-    <ROW Component="KryptonContextMenuExamples.exe_11" ComponentId="{CD1DBBB9-027D-420A-BD82-7DF251C84B97}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="KryptonContextMenuExamples.pdb_11"/>
+    <ROW Component="KryptonContextMenuExamples.exe_11" ComponentId="{CD1DBBB9-027D-420A-BD82-7DF251C84B97}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="KryptonContextMenuExamples.pdb_11" Type="4"/>
     <ROW Component="KryptonContextMenuExamples.exe_12" ComponentId="{36CD74FC-3831-4DF0-B8C8-E127F22C7441}" Directory_="netcoreapp3.1_1_Dir" Attributes="256" KeyPath="KryptonContextMenuExamples.exe_12"/>
     <ROW Component="KryptonContextMenuExamples.exe_13" ComponentId="{F70C68B3-2DC2-49E1-AFE9-3E6FB8AEBFE1}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="KryptonContextMenuExamples.exe_11"/>
     <ROW Component="KryptonContextMenuExamples.exe_2" ComponentId="{A4A2804B-5F9C-441F-A089-2CB3D0F92502}" Directory_="net451_1_Dir" Attributes="0" KeyPath="KryptonContextMenuExamples.exe_2"/>
@@ -987,7 +998,7 @@
     <ROW Component="KryptonDateTimePickerExamples.exe" ComponentId="{7DF586A2-ADEB-4D42-BBB6-982E8FBD64B1}" Directory_="net35_1_Dir" Attributes="0" KeyPath="KryptonDateTimePickerExamples.exe"/>
     <ROW Component="KryptonDateTimePickerExamples.exe_1" ComponentId="{F9110A8C-EAB8-483D-9FF6-E53427B75096}" Directory_="net45_1_Dir" Attributes="0" KeyPath="KryptonDateTimePickerExamples.exe_1"/>
     <ROW Component="KryptonDateTimePickerExamples.exe_10" ComponentId="{646F9CA5-706B-434F-853F-64934BC7F5B4}" Directory_="net48_1_Dir" Attributes="0" KeyPath="KryptonDateTimePickerExamples.exe_10"/>
-    <ROW Component="KryptonDateTimePickerExamples.exe_11" ComponentId="{5179383E-4724-41F5-A953-3BB61DBF6154}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="KryptonDateTimePickerExamples.pdb_11"/>
+    <ROW Component="KryptonDateTimePickerExamples.exe_11" ComponentId="{5179383E-4724-41F5-A953-3BB61DBF6154}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="KryptonDateTimePickerExamples.pdb_11" Type="4"/>
     <ROW Component="KryptonDateTimePickerExamples.exe_12" ComponentId="{1E8F1437-BDF6-44DF-9C11-0D662698D96D}" Directory_="netcoreapp3.1_1_Dir" Attributes="256" KeyPath="KryptonDateTimePickerExamples.exe_12"/>
     <ROW Component="KryptonDateTimePickerExamples.exe_13" ComponentId="{738F7311-C3EB-474D-BD77-85D416CA9A88}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="KryptonDateTimePickerExamples.exe_11"/>
     <ROW Component="KryptonDateTimePickerExamples.exe_2" ComponentId="{1900FEB8-7393-4AAF-94CE-03F5CBD551D7}" Directory_="net451_1_Dir" Attributes="0" KeyPath="KryptonDateTimePickerExamples.exe_2"/>
@@ -1008,7 +1019,7 @@
     <ROW Component="KryptonDomainUpDownExamples.exe" ComponentId="{FCA5A605-DBEC-42A3-8C98-280FF0C0BAA8}" Directory_="net35_1_Dir" Attributes="0" KeyPath="KryptonDomainUpDownExamples.exe"/>
     <ROW Component="KryptonDomainUpDownExamples.exe_1" ComponentId="{B20A89CC-14C8-4414-9E09-CC63E1F9F660}" Directory_="net45_1_Dir" Attributes="0" KeyPath="KryptonDomainUpDownExamples.exe_1"/>
     <ROW Component="KryptonDomainUpDownExamples.exe_10" ComponentId="{A56D3E34-A914-4F4A-9C61-FC22A268C586}" Directory_="net48_1_Dir" Attributes="0" KeyPath="KryptonDomainUpDownExamples.exe_10"/>
-    <ROW Component="KryptonDomainUpDownExamples.exe_11" ComponentId="{EE0B7788-B93C-459C-91B1-3EDE4E1640BC}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="KryptonDomainUpDownExamples.pdb_11"/>
+    <ROW Component="KryptonDomainUpDownExamples.exe_11" ComponentId="{EE0B7788-B93C-459C-91B1-3EDE4E1640BC}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="KryptonDomainUpDownExamples.pdb_11" Type="4"/>
     <ROW Component="KryptonDomainUpDownExamples.exe_12" ComponentId="{08A90628-E5FA-49AE-9225-CF124AA2908D}" Directory_="netcoreapp3.1_1_Dir" Attributes="256" KeyPath="KryptonDomainUpDownExamples.exe_12"/>
     <ROW Component="KryptonDomainUpDownExamples.exe_13" ComponentId="{35B4BC90-A5E7-40B3-998B-5000B50D489B}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="KryptonDomainUpDownExamples.exe_11"/>
     <ROW Component="KryptonDomainUpDownExamples.exe_2" ComponentId="{2B551555-E2DC-4D44-B68E-5A0B1D8CD1DE}" Directory_="net451_1_Dir" Attributes="0" KeyPath="KryptonDomainUpDownExamples.exe_2"/>
@@ -1096,7 +1107,7 @@
     <ROW Component="KryptonGalleryExamples.exe" ComponentId="{70F400F0-F4DE-49C7-9C7E-04CE2932FF94}" Directory_="net35_1_Dir" Attributes="0" KeyPath="KryptonGalleryExamples.exe"/>
     <ROW Component="KryptonGalleryExamples.exe_1" ComponentId="{C83C7E3B-8420-4D64-86BE-15A1074217BE}" Directory_="net45_1_Dir" Attributes="0" KeyPath="KryptonGalleryExamples.exe_1"/>
     <ROW Component="KryptonGalleryExamples.exe_10" ComponentId="{184CEB8F-77E6-41B0-B60F-3A0E696863BA}" Directory_="net48_1_Dir" Attributes="0" KeyPath="KryptonGalleryExamples.exe_10"/>
-    <ROW Component="KryptonGalleryExamples.exe_11" ComponentId="{A4BD8B82-3787-4A61-A5DA-E0042A394EB0}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="KryptonGalleryExamples.pdb_11"/>
+    <ROW Component="KryptonGalleryExamples.exe_11" ComponentId="{A4BD8B82-3787-4A61-A5DA-E0042A394EB0}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="KryptonGalleryExamples.pdb_11" Type="4"/>
     <ROW Component="KryptonGalleryExamples.exe_12" ComponentId="{1FEA87DE-EC52-476E-AF6E-D088F0CB3E1C}" Directory_="netcoreapp3.1_1_Dir" Attributes="256" KeyPath="KryptonGalleryExamples.exe_12"/>
     <ROW Component="KryptonGalleryExamples.exe_13" ComponentId="{8AC12C3C-BB23-4587-9EBE-060C4E6398F2}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="KryptonGalleryExamples.exe_11"/>
     <ROW Component="KryptonGalleryExamples.exe_2" ComponentId="{1184DD0D-56F7-4BEA-8E5B-CA9808F3882F}" Directory_="net451_1_Dir" Attributes="0" KeyPath="KryptonGalleryExamples.exe_2"/>
@@ -1117,7 +1128,7 @@
     <ROW Component="KryptonGroupBoxExamples.exe" ComponentId="{4F33CC97-97C2-4EB7-8E5B-4ACBE7D79323}" Directory_="net35_1_Dir" Attributes="0" KeyPath="KryptonGroupBoxExamples.exe"/>
     <ROW Component="KryptonGroupBoxExamples.exe_1" ComponentId="{BB208FAD-D565-4165-B820-09919FD57CB5}" Directory_="net45_1_Dir" Attributes="0" KeyPath="KryptonGroupBoxExamples.exe_1"/>
     <ROW Component="KryptonGroupBoxExamples.exe_10" ComponentId="{D5F03A64-FEDD-41ED-B7DD-15C07F036625}" Directory_="net48_1_Dir" Attributes="0" KeyPath="KryptonGroupBoxExamples.exe_10"/>
-    <ROW Component="KryptonGroupBoxExamples.exe_11" ComponentId="{541B063D-2FE4-4DFB-8CA3-78CC3A3D172A}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="KryptonGroupBoxExamples.pdb_11"/>
+    <ROW Component="KryptonGroupBoxExamples.exe_11" ComponentId="{541B063D-2FE4-4DFB-8CA3-78CC3A3D172A}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="KryptonGroupBoxExamples.pdb_11" Type="4"/>
     <ROW Component="KryptonGroupBoxExamples.exe_12" ComponentId="{7D8531E5-07D9-4D46-AD5E-294D14A38B63}" Directory_="netcoreapp3.1_1_Dir" Attributes="256" KeyPath="KryptonGroupBoxExamples.exe_12"/>
     <ROW Component="KryptonGroupBoxExamples.exe_13" ComponentId="{DCF48212-2304-441D-B2DD-E5BE24FC8DA3}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="KryptonGroupBoxExamples.exe_11"/>
     <ROW Component="KryptonGroupBoxExamples.exe_2" ComponentId="{FD86431E-63DF-47E5-82C3-6016596AF8A1}" Directory_="net451_1_Dir" Attributes="0" KeyPath="KryptonGroupBoxExamples.exe_2"/>
@@ -1138,7 +1149,7 @@
     <ROW Component="KryptonGroupExamples.exe" ComponentId="{916B4E80-027D-4DDA-8907-F2DF0DD43282}" Directory_="net35_1_Dir" Attributes="0" KeyPath="KryptonGroupExamples.exe"/>
     <ROW Component="KryptonGroupExamples.exe_1" ComponentId="{FAD4226C-D8E5-4401-BEB1-324B13E8678B}" Directory_="net45_1_Dir" Attributes="0" KeyPath="KryptonGroupExamples.exe_1"/>
     <ROW Component="KryptonGroupExamples.exe_10" ComponentId="{AAF24495-452E-44E3-BAF4-7BD00EFEAC21}" Directory_="net48_1_Dir" Attributes="0" KeyPath="KryptonGroupExamples.exe_10"/>
-    <ROW Component="KryptonGroupExamples.exe_11" ComponentId="{9880BE46-8D9D-4299-9E08-A5F01F415DD5}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="KryptonGroupExamples.pdb_11"/>
+    <ROW Component="KryptonGroupExamples.exe_11" ComponentId="{9880BE46-8D9D-4299-9E08-A5F01F415DD5}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="KryptonGroupExamples.pdb_11" Type="4"/>
     <ROW Component="KryptonGroupExamples.exe_12" ComponentId="{40E50058-E5E8-46E1-A751-BF95FA9141DC}" Directory_="netcoreapp3.1_1_Dir" Attributes="256" KeyPath="KryptonGroupExamples.exe_12"/>
     <ROW Component="KryptonGroupExamples.exe_13" ComponentId="{053211A4-331E-45D8-B6AF-5016E13956D3}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="KryptonGroupExamples.exe_11"/>
     <ROW Component="KryptonGroupExamples.exe_2" ComponentId="{AC689079-CB36-4463-9E87-862B062A4A09}" Directory_="net451_1_Dir" Attributes="0" KeyPath="KryptonGroupExamples.exe_2"/>
@@ -1159,7 +1170,7 @@
     <ROW Component="KryptonHeaderExamples.exe" ComponentId="{1B9318FF-8EB0-4758-81CE-51CE1970B70A}" Directory_="net35_1_Dir" Attributes="0" KeyPath="KryptonHeaderExamples.exe"/>
     <ROW Component="KryptonHeaderExamples.exe_1" ComponentId="{CA05B9F3-B030-4952-86EE-B7C6FB3850A4}" Directory_="net45_1_Dir" Attributes="0" KeyPath="KryptonHeaderExamples.exe_1"/>
     <ROW Component="KryptonHeaderExamples.exe_10" ComponentId="{EC53353F-B67A-4ADE-B59F-54C583BB7BAF}" Directory_="net48_1_Dir" Attributes="0" KeyPath="KryptonHeaderExamples.exe_10"/>
-    <ROW Component="KryptonHeaderExamples.exe_11" ComponentId="{1B602D17-D6D4-45B9-B5B9-4EC2A6087853}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="KryptonHeaderExamples.pdb_11"/>
+    <ROW Component="KryptonHeaderExamples.exe_11" ComponentId="{1B602D17-D6D4-45B9-B5B9-4EC2A6087853}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="KryptonHeaderExamples.pdb_11" Type="4"/>
     <ROW Component="KryptonHeaderExamples.exe_12" ComponentId="{7729A10A-CF11-407C-A01A-BB3503938535}" Directory_="netcoreapp3.1_1_Dir" Attributes="256" KeyPath="KryptonHeaderExamples.exe_12"/>
     <ROW Component="KryptonHeaderExamples.exe_13" ComponentId="{1276D61F-E36C-4423-B189-826D9EF25136}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="KryptonHeaderExamples.exe_11"/>
     <ROW Component="KryptonHeaderExamples.exe_2" ComponentId="{57FD3BD7-9CF5-4EC1-9384-1969C6CC30D6}" Directory_="net451_1_Dir" Attributes="0" KeyPath="KryptonHeaderExamples.exe_2"/>
@@ -1201,7 +1212,7 @@
     <ROW Component="KryptonInputBoxExamples.exe" ComponentId="{054D23CF-AE37-4523-BB66-732CFADDB3B0}" Directory_="net35_1_Dir" Attributes="0" KeyPath="KryptonInputBoxExamples.exe"/>
     <ROW Component="KryptonInputBoxExamples.exe_1" ComponentId="{CF54561F-A6F8-4276-B73A-689E2828909D}" Directory_="net45_1_Dir" Attributes="0" KeyPath="KryptonInputBoxExamples.exe_1"/>
     <ROW Component="KryptonInputBoxExamples.exe_10" ComponentId="{436BABA3-3B9F-4588-A5A2-4217A191D2DB}" Directory_="net48_1_Dir" Attributes="0" KeyPath="KryptonInputBoxExamples.exe_10"/>
-    <ROW Component="KryptonInputBoxExamples.exe_11" ComponentId="{9F7B724D-B888-4861-9BFA-CC54A885F3AC}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="KryptonInputBoxExamples.pdb_11"/>
+    <ROW Component="KryptonInputBoxExamples.exe_11" ComponentId="{9F7B724D-B888-4861-9BFA-CC54A885F3AC}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="KryptonInputBoxExamples.pdb_11" Type="4"/>
     <ROW Component="KryptonInputBoxExamples.exe_12" ComponentId="{F72A1DB4-38AE-424F-A950-E27BEC5E29AD}" Directory_="netcoreapp3.1_1_Dir" Attributes="256" KeyPath="KryptonInputBoxExamples.exe_12"/>
     <ROW Component="KryptonInputBoxExamples.exe_13" ComponentId="{4901228A-3FB5-4F53-B4BC-BF81ADBAE742}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="KryptonInputBoxExamples.exe_11"/>
     <ROW Component="KryptonInputBoxExamples.exe_2" ComponentId="{8DE4D453-4EF0-4D8A-8CD6-362BBC95CB32}" Directory_="net451_1_Dir" Attributes="0" KeyPath="KryptonInputBoxExamples.exe_2"/>
@@ -1243,7 +1254,7 @@
     <ROW Component="KryptonLinkLabelExamples.exe" ComponentId="{C4E91B58-00C8-4C73-8D75-C7DB84D5E65C}" Directory_="net35_1_Dir" Attributes="0" KeyPath="KryptonLinkLabelExamples.exe"/>
     <ROW Component="KryptonLinkLabelExamples.exe_1" ComponentId="{685968BE-EF22-495B-BAEE-7660BAE1841D}" Directory_="net45_1_Dir" Attributes="0" KeyPath="KryptonLinkLabelExamples.exe_1"/>
     <ROW Component="KryptonLinkLabelExamples.exe_10" ComponentId="{69CC7F32-5EC9-4106-B54B-A8C5D04EFCED}" Directory_="net48_1_Dir" Attributes="0" KeyPath="KryptonLinkLabelExamples.exe_10"/>
-    <ROW Component="KryptonLinkLabelExamples.exe_11" ComponentId="{ECAB2DD2-0562-48D6-8B96-EBD9B8F707C1}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="KryptonLinkLabelExamples.pdb_11"/>
+    <ROW Component="KryptonLinkLabelExamples.exe_11" ComponentId="{ECAB2DD2-0562-48D6-8B96-EBD9B8F707C1}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="KryptonLinkLabelExamples.pdb_11" Type="4"/>
     <ROW Component="KryptonLinkLabelExamples.exe_12" ComponentId="{3132368A-D947-492B-BD0A-8CDA06BE783E}" Directory_="netcoreapp3.1_1_Dir" Attributes="256" KeyPath="KryptonLinkLabelExamples.exe_12"/>
     <ROW Component="KryptonLinkLabelExamples.exe_13" ComponentId="{D41D3211-CC5F-4849-A3DC-EF00B7E0DCEB}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="KryptonLinkLabelExamples.exe_11"/>
     <ROW Component="KryptonLinkLabelExamples.exe_2" ComponentId="{237B3E02-9B44-4B23-AB36-B75856086EDE}" Directory_="net451_1_Dir" Attributes="0" KeyPath="KryptonLinkLabelExamples.exe_2"/>
@@ -1285,7 +1296,7 @@
     <ROW Component="KryptonMaskedTextBoxExamples.exe" ComponentId="{1F744BF3-F696-42ED-9A18-05D9EF56449F}" Directory_="net35_1_Dir" Attributes="0" KeyPath="KryptonMaskedTextBoxExamples.exe"/>
     <ROW Component="KryptonMaskedTextBoxExamples.exe_1" ComponentId="{526DD41D-78C1-489F-BD12-78FE6A513683}" Directory_="net45_1_Dir" Attributes="0" KeyPath="KryptonMaskedTextBoxExamples.exe_1"/>
     <ROW Component="KryptonMaskedTextBoxExamples.exe_10" ComponentId="{816BA42B-C6C3-4BD9-A10C-AD66BE0B8F1F}" Directory_="net48_1_Dir" Attributes="0" KeyPath="KryptonMaskedTextBoxExamples.exe_10"/>
-    <ROW Component="KryptonMaskedTextBoxExamples.exe_11" ComponentId="{8D4BA668-A6BC-49F4-93BB-86503DC9741A}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="KryptonMaskedTextBoxExamples.pdb_11"/>
+    <ROW Component="KryptonMaskedTextBoxExamples.exe_11" ComponentId="{8D4BA668-A6BC-49F4-93BB-86503DC9741A}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="KryptonMaskedTextBoxExamples.pdb_11" Type="4"/>
     <ROW Component="KryptonMaskedTextBoxExamples.exe_12" ComponentId="{E0DF1AF4-C9A4-481B-9CAA-DFB405C108F7}" Directory_="netcoreapp3.1_1_Dir" Attributes="256" KeyPath="KryptonMaskedTextBoxExamples.exe_12"/>
     <ROW Component="KryptonMaskedTextBoxExamples.exe_13" ComponentId="{9679D0A1-4150-4997-BF2F-10B63777854E}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="KryptonMaskedTextBoxExamples.exe_11"/>
     <ROW Component="KryptonMaskedTextBoxExamples.exe_2" ComponentId="{FF4308D2-7A04-4E42-8452-CBD84B079FB2}" Directory_="net451_1_Dir" Attributes="0" KeyPath="KryptonMaskedTextBoxExamples.exe_2"/>
@@ -1306,7 +1317,7 @@
     <ROW Component="KryptonMessageBoxExamples.exe" ComponentId="{A29A0A6F-8684-4794-AC9D-1D52D1978926}" Directory_="net35_1_Dir" Attributes="0" KeyPath="KryptonMessageBoxExamples.exe"/>
     <ROW Component="KryptonMessageBoxExamples.exe_1" ComponentId="{ACEC0E36-E69B-44EE-B97A-C77F0F411A60}" Directory_="net45_1_Dir" Attributes="0" KeyPath="KryptonMessageBoxExamples.exe_1"/>
     <ROW Component="KryptonMessageBoxExamples.exe_10" ComponentId="{526D9B6B-3E7D-4281-AB53-B8EBD698A77E}" Directory_="net48_1_Dir" Attributes="0" KeyPath="KryptonMessageBoxExamples.exe_10"/>
-    <ROW Component="KryptonMessageBoxExamples.exe_11" ComponentId="{38959759-17BA-489D-BEDB-52CD0765D3AC}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="KryptonMessageBoxExamples.pdb_11"/>
+    <ROW Component="KryptonMessageBoxExamples.exe_11" ComponentId="{38959759-17BA-489D-BEDB-52CD0765D3AC}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="KryptonMessageBoxExamples.pdb_11" Type="4"/>
     <ROW Component="KryptonMessageBoxExamples.exe_12" ComponentId="{DE96F48E-B0EB-4DA3-B17B-924584C48E33}" Directory_="netcoreapp3.1_1_Dir" Attributes="256" KeyPath="KryptonMessageBoxExamples.exe_12"/>
     <ROW Component="KryptonMessageBoxExamples.exe_13" ComponentId="{29EAA394-513F-4849-ADA2-B106585761FA}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="KryptonMessageBoxExamples.exe_11"/>
     <ROW Component="KryptonMessageBoxExamples.exe_2" ComponentId="{85B16647-EE71-43BE-99E6-B80FBF74FDBC}" Directory_="net451_1_Dir" Attributes="0" KeyPath="KryptonMessageBoxExamples.exe_2"/>
@@ -1390,7 +1401,7 @@
     <ROW Component="KryptonPanelExamples.exe" ComponentId="{CAAA287C-4F0C-42D9-8C42-6D11CEDE34C5}" Directory_="net35_1_Dir" Attributes="0" KeyPath="KryptonPanelExamples.exe"/>
     <ROW Component="KryptonPanelExamples.exe_1" ComponentId="{0B834FB1-4C5A-4303-8D7C-BF951076937C}" Directory_="net45_1_Dir" Attributes="0" KeyPath="KryptonPanelExamples.exe_1"/>
     <ROW Component="KryptonPanelExamples.exe_10" ComponentId="{A5F73EE4-D843-4E7B-8C3E-B50AA75653A8}" Directory_="net48_1_Dir" Attributes="0" KeyPath="KryptonPanelExamples.exe_10"/>
-    <ROW Component="KryptonPanelExamples.exe_11" ComponentId="{E3CD171C-61C8-4E7A-A4DF-EA0E59CB5FA2}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="KryptonPanelExamples.pdb_11"/>
+    <ROW Component="KryptonPanelExamples.exe_11" ComponentId="{E3CD171C-61C8-4E7A-A4DF-EA0E59CB5FA2}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="KryptonPanelExamples.pdb_11" Type="4"/>
     <ROW Component="KryptonPanelExamples.exe_12" ComponentId="{AE398889-D178-4096-85AA-9CA714F2996A}" Directory_="netcoreapp3.1_1_Dir" Attributes="256" KeyPath="KryptonPanelExamples.exe_12"/>
     <ROW Component="KryptonPanelExamples.exe_13" ComponentId="{39B4FCDC-1C26-4010-B7CC-E07881557A4B}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="KryptonPanelExamples.exe_11"/>
     <ROW Component="KryptonPanelExamples.exe_2" ComponentId="{77E63F59-694B-47D2-89DF-5FF6F2653223}" Directory_="net451_1_Dir" Attributes="0" KeyPath="KryptonPanelExamples.exe_2"/>
@@ -1432,7 +1443,7 @@
     <ROW Component="KryptonRichTextBoxExamples.exe" ComponentId="{4239EA2D-4D3D-4046-9B30-70DC4D83522A}" Directory_="net35_1_Dir" Attributes="0" KeyPath="KryptonRichTextBoxExamples.exe"/>
     <ROW Component="KryptonRichTextBoxExamples.exe_1" ComponentId="{39F480B2-BB36-459C-847B-ABC02861A4E2}" Directory_="net45_1_Dir" Attributes="0" KeyPath="KryptonRichTextBoxExamples.exe_1"/>
     <ROW Component="KryptonRichTextBoxExamples.exe_10" ComponentId="{92E68C36-2FAF-4910-BEA1-81799008BDFB}" Directory_="net48_1_Dir" Attributes="0" KeyPath="KryptonRichTextBoxExamples.exe_10"/>
-    <ROW Component="KryptonRichTextBoxExamples.exe_11" ComponentId="{9BBAC749-EC4B-4529-9B43-2A8FF8668CC0}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="KryptonRichTextBoxExamples.pdb_11"/>
+    <ROW Component="KryptonRichTextBoxExamples.exe_11" ComponentId="{9BBAC749-EC4B-4529-9B43-2A8FF8668CC0}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="KryptonRichTextBoxExamples.pdb_11" Type="4"/>
     <ROW Component="KryptonRichTextBoxExamples.exe_12" ComponentId="{E64B31AD-2766-4438-BBA1-E259404FDEE5}" Directory_="netcoreapp3.1_1_Dir" Attributes="256" KeyPath="KryptonRichTextBoxExamples.exe_12"/>
     <ROW Component="KryptonRichTextBoxExamples.exe_13" ComponentId="{59EC4943-29E7-4184-9432-A738F49C6CBD}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="KryptonRichTextBoxExamples.exe_11"/>
     <ROW Component="KryptonRichTextBoxExamples.exe_2" ComponentId="{4D80C147-E473-45B8-AA3F-FDA059360A5B}" Directory_="net451_1_Dir" Attributes="0" KeyPath="KryptonRichTextBoxExamples.exe_2"/>
@@ -1453,7 +1464,7 @@
     <ROW Component="KryptonSeparatorExamples.exe" ComponentId="{9FA4130D-2956-4632-8158-30C2B02D45F4}" Directory_="net35_1_Dir" Attributes="0" KeyPath="KryptonSeparatorExamples.exe"/>
     <ROW Component="KryptonSeparatorExamples.exe_1" ComponentId="{734BAACE-79AE-4AC2-9A34-6023A3BCA3A0}" Directory_="net45_1_Dir" Attributes="0" KeyPath="KryptonSeparatorExamples.exe_1"/>
     <ROW Component="KryptonSeparatorExamples.exe_10" ComponentId="{0E554909-5BBF-4A2F-8CCF-CADE246340C4}" Directory_="net48_1_Dir" Attributes="0" KeyPath="KryptonSeparatorExamples.exe_10"/>
-    <ROW Component="KryptonSeparatorExamples.exe_11" ComponentId="{3AF81120-BEE7-47EA-959A-AA7B72B64BAA}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="KryptonSeparatorExamples.pdb_11"/>
+    <ROW Component="KryptonSeparatorExamples.exe_11" ComponentId="{3AF81120-BEE7-47EA-959A-AA7B72B64BAA}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="KryptonSeparatorExamples.pdb_11" Type="4"/>
     <ROW Component="KryptonSeparatorExamples.exe_12" ComponentId="{B36A76C7-7A84-4CFD-A1DC-1866DF7570C6}" Directory_="netcoreapp3.1_1_Dir" Attributes="256" KeyPath="KryptonSeparatorExamples.exe_12"/>
     <ROW Component="KryptonSeparatorExamples.exe_13" ComponentId="{00E0131E-9D21-4188-9D61-03E30B4F8ADB}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="KryptonSeparatorExamples.exe_11"/>
     <ROW Component="KryptonSeparatorExamples.exe_2" ComponentId="{45B7EDE4-5B13-4D6D-B0AD-AACA0D093A06}" Directory_="net451_1_Dir" Attributes="0" KeyPath="KryptonSeparatorExamples.exe_2"/>
@@ -1474,7 +1485,7 @@
     <ROW Component="KryptonSplitContainerExamples.exe" ComponentId="{F4E863D8-D1F4-412B-9D77-A6E8B560EEFE}" Directory_="net35_1_Dir" Attributes="0" KeyPath="KryptonSplitContainerExamples.exe"/>
     <ROW Component="KryptonSplitContainerExamples.exe_1" ComponentId="{B7A0E717-7EF3-4600-92A3-B67D56C29072}" Directory_="net45_1_Dir" Attributes="0" KeyPath="KryptonSplitContainerExamples.exe_1"/>
     <ROW Component="KryptonSplitContainerExamples.exe_10" ComponentId="{8D9ECED7-F3B5-4103-9AA2-77FFB2195FB0}" Directory_="net48_1_Dir" Attributes="0" KeyPath="KryptonSplitContainerExamples.exe_10"/>
-    <ROW Component="KryptonSplitContainerExamples.exe_11" ComponentId="{58E0E899-F050-4240-935C-2162C9DBAD31}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="KryptonSplitContainerExamples.pdb_11"/>
+    <ROW Component="KryptonSplitContainerExamples.exe_11" ComponentId="{58E0E899-F050-4240-935C-2162C9DBAD31}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="KryptonSplitContainerExamples.pdb_11" Type="4"/>
     <ROW Component="KryptonSplitContainerExamples.exe_12" ComponentId="{A967E036-0484-4748-93A9-47832CA70072}" Directory_="netcoreapp3.1_1_Dir" Attributes="256" KeyPath="KryptonSplitContainerExamples.exe_12"/>
     <ROW Component="KryptonSplitContainerExamples.exe_13" ComponentId="{F9852D13-FA0C-4F2D-95FB-71B32F8256C0}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="KryptonSplitContainerExamples.exe_11"/>
     <ROW Component="KryptonSplitContainerExamples.exe_2" ComponentId="{A82CB7FB-DA8E-45F1-92F2-CDFFDB2913C2}" Directory_="net451_1_Dir" Attributes="0" KeyPath="KryptonSplitContainerExamples.exe_2"/>
@@ -1495,7 +1506,7 @@
     <ROW Component="KryptonTaskDialogExamples.exe" ComponentId="{6D1299BA-505B-4317-ADE7-00F927374BE1}" Directory_="net35_1_Dir" Attributes="0" KeyPath="KryptonTaskDialogExamples.exe"/>
     <ROW Component="KryptonTaskDialogExamples.exe_1" ComponentId="{7037FD87-0550-4535-A851-B411B2E1CD29}" Directory_="net45_1_Dir" Attributes="0" KeyPath="KryptonTaskDialogExamples.exe_1"/>
     <ROW Component="KryptonTaskDialogExamples.exe_10" ComponentId="{FA6AF654-74C8-4C84-AD74-35C35196658D}" Directory_="net48_1_Dir" Attributes="0" KeyPath="KryptonTaskDialogExamples.exe_10"/>
-    <ROW Component="KryptonTaskDialogExamples.exe_11" ComponentId="{22E6C949-790D-4185-8B2C-766148B11A35}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="KryptonTaskDialogExamples.pdb_11"/>
+    <ROW Component="KryptonTaskDialogExamples.exe_11" ComponentId="{22E6C949-790D-4185-8B2C-766148B11A35}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="KryptonTaskDialogExamples.pdb_11" Type="4"/>
     <ROW Component="KryptonTaskDialogExamples.exe_12" ComponentId="{3073B181-D85A-4AFE-B014-809B5D9B0263}" Directory_="netcoreapp3.1_1_Dir" Attributes="256" KeyPath="KryptonTaskDialogExamples.exe_12"/>
     <ROW Component="KryptonTaskDialogExamples.exe_13" ComponentId="{65D05B26-8DD5-4381-9E7E-6B859664945B}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="KryptonTaskDialogExamples.exe_11"/>
     <ROW Component="KryptonTaskDialogExamples.exe_2" ComponentId="{B2EEFFC8-5316-48A0-A983-AEA377D12780}" Directory_="net451_1_Dir" Attributes="0" KeyPath="KryptonTaskDialogExamples.exe_2"/>
@@ -1529,7 +1540,7 @@
     <ROW Component="KryptonTextBoxExamples.pdb" ComponentId="{2314C539-EF7B-4D06-A08F-A9CED3369112}" Directory_="net5.0windows_1_Dir" Attributes="0" KeyPath="KryptonTextBoxExamples.pdb_11" Type="4"/>
     <ROW Component="KryptonTextBoxExamples.runtimeconfig.dev.json" ComponentId="{45F1CFF8-0AC9-4BDB-9392-27A3EB735AF8}" Directory_="net5.0windows_1_Dir" Attributes="0" KeyPath="KryptonTextBoxExamples.runtimeconfig.dev.json"/>
     <ROW Component="KryptonTextBoxExamples.runtimeconfig.json" ComponentId="{B7913FD4-8B41-4666-8957-A9569C9F148B}" Directory_="net5.0windows_1_Dir" Attributes="0" KeyPath="KryptonTextBoxExamples.runtimeconfig.json"/>
-    <ROW Component="KryptonToolkitHelp.chm" ComponentId="{21E30895-4DA5-4234-B4AA-CFC9D3AA6F54}" Directory_="Help_Dir" Attributes="0" KeyPath="KryptonToolkitHelp.chm" Type="1"/>
+    <ROW Component="KryptonToolkitHelp.chm" ComponentId="{21E30895-4DA5-4234-B4AA-CFC9D3AA6F54}" Directory_="Help_Dir" Attributes="0" KeyPath="StandardToolkitDocumentation.chm" Type="1"/>
     <ROW Component="KryptonToolkitItemsInstaller.dll" ComponentId="{13591F9B-ADDA-427A-956F-80C263693EAA}" Directory_="Both_Dir" Attributes="0" KeyPath="KryptonToolkitItemsInstaller.dll"/>
     <ROW Component="KryptonToolkitItemsInstaller.vsix" ComponentId="{F2A6A1B2-0ED0-446B-A665-64CA414B30B8}" Directory_="Both_Dir" Attributes="0" KeyPath="KryptonToolkitItemsInstaller.vsix" Type="0"/>
     <ROW Component="KryptonToolkitSuiteCoreLiteModule.url" ComponentId="{509BEE90-CF65-4FD2-A543-380E979289E1}" Directory_="NuGet_Dir" Attributes="0" KeyPath="KryptonToolkitSuiteCoreLiteModule.url" Type="0"/>
@@ -1546,7 +1557,7 @@
     <ROW Component="KryptonTrackBarExamples.exe" ComponentId="{49511046-2D63-4556-B7A6-5CE8F5726253}" Directory_="net35_1_Dir" Attributes="0" KeyPath="KryptonTrackBarExamples.exe"/>
     <ROW Component="KryptonTrackBarExamples.exe_1" ComponentId="{D0D6D658-02D3-4847-B91B-31E3EC53A104}" Directory_="net45_1_Dir" Attributes="0" KeyPath="KryptonTrackBarExamples.exe_1"/>
     <ROW Component="KryptonTrackBarExamples.exe_10" ComponentId="{5B36EE79-5710-48BE-AA70-F1059BC78E92}" Directory_="net48_1_Dir" Attributes="0" KeyPath="KryptonTrackBarExamples.exe_10"/>
-    <ROW Component="KryptonTrackBarExamples.exe_11" ComponentId="{C7E8CF83-BC6F-4F92-A490-88BFE41256A3}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="KryptonTrackBarExamples.pdb_11"/>
+    <ROW Component="KryptonTrackBarExamples.exe_11" ComponentId="{C7E8CF83-BC6F-4F92-A490-88BFE41256A3}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="KryptonTrackBarExamples.pdb_11" Type="4"/>
     <ROW Component="KryptonTrackBarExamples.exe_12" ComponentId="{D5767E88-4663-4905-9750-EE71227BD24F}" Directory_="netcoreapp3.1_1_Dir" Attributes="256" KeyPath="KryptonTrackBarExamples.exe_12"/>
     <ROW Component="KryptonTrackBarExamples.exe_13" ComponentId="{6891FC16-BD41-4E44-9B4B-33B05DC0FB97}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="KryptonTrackBarExamples.exe_11"/>
     <ROW Component="KryptonTrackBarExamples.exe_2" ComponentId="{619AFEA9-AEA1-498D-86DD-DB3DE40E7B37}" Directory_="net451_1_Dir" Attributes="0" KeyPath="KryptonTrackBarExamples.exe_2"/>
@@ -1567,7 +1578,7 @@
     <ROW Component="KryptonTreeViewExamples.exe" ComponentId="{C7580629-23F7-4ABA-9F3D-97365DB0C87D}" Directory_="net35_1_Dir" Attributes="0" KeyPath="KryptonTreeViewExamples.exe"/>
     <ROW Component="KryptonTreeViewExamples.exe_1" ComponentId="{FC991789-DF9F-4313-8711-83782B4EE7B1}" Directory_="net45_1_Dir" Attributes="0" KeyPath="KryptonTreeViewExamples.exe_1"/>
     <ROW Component="KryptonTreeViewExamples.exe_10" ComponentId="{5718D43B-D1AB-4D6B-AB6F-C45A5A91F535}" Directory_="net48_1_Dir" Attributes="0" KeyPath="KryptonTreeViewExamples.exe_10"/>
-    <ROW Component="KryptonTreeViewExamples.exe_11" ComponentId="{0FEA2643-9BF7-404F-A747-A9C804B6D325}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="KryptonTreeViewExamples.pdb_11"/>
+    <ROW Component="KryptonTreeViewExamples.exe_11" ComponentId="{0FEA2643-9BF7-404F-A747-A9C804B6D325}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="KryptonTreeViewExamples.pdb_11" Type="4"/>
     <ROW Component="KryptonTreeViewExamples.exe_12" ComponentId="{39D56823-86FF-4D30-A641-33475F7D5774}" Directory_="netcoreapp3.1_1_Dir" Attributes="256" KeyPath="KryptonTreeViewExamples.exe_12"/>
     <ROW Component="KryptonTreeViewExamples.exe_13" ComponentId="{881722D9-9FC9-4543-B6C8-88C673757592}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="KryptonTreeViewExamples.exe_11"/>
     <ROW Component="KryptonTreeViewExamples.exe_2" ComponentId="{36B37FA2-F914-44B7-A035-17B49FCA792B}" Directory_="net451_1_Dir" Attributes="0" KeyPath="KryptonTreeViewExamples.exe_2"/>
@@ -1631,7 +1642,7 @@
     <ROW Component="MDIRibbon.exe" ComponentId="{AC9BB6D7-A105-4113-AB61-A22117FEF76C}" Directory_="net35_1_Dir" Attributes="0" KeyPath="MDIRibbon.exe"/>
     <ROW Component="MDIRibbon.exe_1" ComponentId="{2616D009-F699-447A-9718-73B530629506}" Directory_="net45_1_Dir" Attributes="0" KeyPath="MDIRibbon.exe_1"/>
     <ROW Component="MDIRibbon.exe_10" ComponentId="{903A6C9A-6565-4F18-991C-8411E146F702}" Directory_="net48_1_Dir" Attributes="0" KeyPath="MDIRibbon.exe_10"/>
-    <ROW Component="MDIRibbon.exe_11" ComponentId="{8828BD90-9005-4610-B07B-9093576BFD87}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="MDIRibbon.pdb_11"/>
+    <ROW Component="MDIRibbon.exe_11" ComponentId="{8828BD90-9005-4610-B07B-9093576BFD87}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="MDIRibbon.pdb_11" Type="4"/>
     <ROW Component="MDIRibbon.exe_12" ComponentId="{A05E6E24-897D-4FFD-90FB-73F946B223E1}" Directory_="netcoreapp3.1_1_Dir" Attributes="256" KeyPath="MDIRibbon.exe_12"/>
     <ROW Component="MDIRibbon.exe_13" ComponentId="{1D433EA5-8365-41DF-A7F1-B8D0663A078A}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="MDIRibbon.exe_11"/>
     <ROW Component="MDIRibbon.exe_2" ComponentId="{4CD53184-B6C7-4767-A40D-57BBB9B17CC1}" Directory_="net451_1_Dir" Attributes="0" KeyPath="MDIRibbon.exe_2"/>
@@ -1652,7 +1663,7 @@
     <ROW Component="MemoEditor.exe" ComponentId="{4671B075-B5E4-4FD2-9093-E9E7F0D1C417}" Directory_="net35_1_Dir" Attributes="0" KeyPath="MemoEditor.exe"/>
     <ROW Component="MemoEditor.exe_1" ComponentId="{C843ACC8-E800-4EB3-9B3C-DCABD993121C}" Directory_="net45_1_Dir" Attributes="0" KeyPath="MemoEditor.exe_1"/>
     <ROW Component="MemoEditor.exe_10" ComponentId="{DB1072B0-21C4-4502-B31F-1E67DA8D4919}" Directory_="net48_1_Dir" Attributes="0" KeyPath="MemoEditor.exe_10"/>
-    <ROW Component="MemoEditor.exe_11" ComponentId="{2D8BF8C6-1D81-4A64-8F56-4B7BB2644DD2}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="MemoEditor.pdb_11"/>
+    <ROW Component="MemoEditor.exe_11" ComponentId="{2D8BF8C6-1D81-4A64-8F56-4B7BB2644DD2}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="MemoEditor.pdb_11" Type="4"/>
     <ROW Component="MemoEditor.exe_12" ComponentId="{440183E8-7391-4162-9203-B3C75F15EF74}" Directory_="netcoreapp3.1_1_Dir" Attributes="256" KeyPath="MemoEditor.exe_12"/>
     <ROW Component="MemoEditor.exe_13" ComponentId="{6825C0C4-07F2-46F2-90B6-52EA044BFEDE}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="MemoEditor.exe_11"/>
     <ROW Component="MemoEditor.exe_2" ComponentId="{F69D3B2C-E5A9-4D2C-B360-81ACAA6D59B6}" Directory_="net451_1_Dir" Attributes="0" KeyPath="MemoEditor.exe_2"/>
@@ -1738,7 +1749,7 @@
     <ROW Component="MultiControlDocking.exe" ComponentId="{C5FA596D-DDE3-449D-9AA0-0A1005BB0BA2}" Directory_="net35_1_Dir" Attributes="0" KeyPath="MultiControlDocking.exe"/>
     <ROW Component="MultiControlDocking.exe_1" ComponentId="{BC4E759F-B403-4A69-BD93-41FE5933448E}" Directory_="net45_1_Dir" Attributes="0" KeyPath="MultiControlDocking.exe_1"/>
     <ROW Component="MultiControlDocking.exe_10" ComponentId="{81050419-E219-48ED-B524-9D9AF6449209}" Directory_="net48_1_Dir" Attributes="0" KeyPath="MultiControlDocking.exe_10"/>
-    <ROW Component="MultiControlDocking.exe_11" ComponentId="{7650D87A-0211-44C9-A552-A57013D83D28}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="MultiControlDocking.pdb_11"/>
+    <ROW Component="MultiControlDocking.exe_11" ComponentId="{7650D87A-0211-44C9-A552-A57013D83D28}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="MultiControlDocking.pdb_11" Type="4"/>
     <ROW Component="MultiControlDocking.exe_12" ComponentId="{BF1729D4-73FA-41F8-BB2F-BBBD9EAC9DFA}" Directory_="netcoreapp3.1_1_Dir" Attributes="256" KeyPath="MultiControlDocking.exe_12"/>
     <ROW Component="MultiControlDocking.exe_13" ComponentId="{43FDFA6E-EFA4-4DD5-807D-31796556A0DF}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="MultiControlDocking.exe_11"/>
     <ROW Component="MultiControlDocking.exe_2" ComponentId="{B837EE74-EF9E-45CF-8F71-45B0B00C9240}" Directory_="net451_1_Dir" Attributes="0" KeyPath="MultiControlDocking.exe_2"/>
@@ -1801,7 +1812,7 @@
     <ROW Component="NavigatorPalettes.exe" ComponentId="{B644EB05-0153-49A7-B3CB-DEB10477844D}" Directory_="net35_1_Dir" Attributes="0" KeyPath="NavigatorPalettes.exe"/>
     <ROW Component="NavigatorPalettes.exe_1" ComponentId="{8C186EF5-8DB7-4B70-BFC8-419553A597DE}" Directory_="net45_1_Dir" Attributes="0" KeyPath="NavigatorPalettes.exe_1"/>
     <ROW Component="NavigatorPalettes.exe_10" ComponentId="{1134FAC4-491B-4F94-B337-137A5E079980}" Directory_="net48_1_Dir" Attributes="0" KeyPath="NavigatorPalettes.exe_10"/>
-    <ROW Component="NavigatorPalettes.exe_11" ComponentId="{ACB842A9-2776-4CA2-92B6-5DE62B3A775D}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="NavigatorPalettes.pdb_11"/>
+    <ROW Component="NavigatorPalettes.exe_11" ComponentId="{ACB842A9-2776-4CA2-92B6-5DE62B3A775D}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="NavigatorPalettes.pdb_11" Type="4"/>
     <ROW Component="NavigatorPalettes.exe_12" ComponentId="{0080565F-BA48-4947-8B8E-DF47F07651AC}" Directory_="netcoreapp3.1_1_Dir" Attributes="256" KeyPath="NavigatorPalettes.exe_12"/>
     <ROW Component="NavigatorPalettes.exe_13" ComponentId="{7C5C2A6E-625F-410B-9CB2-6D8F77F157FD}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="NavigatorPalettes.exe_11"/>
     <ROW Component="NavigatorPalettes.exe_2" ComponentId="{6A3995DC-656E-451A-8987-621706E8879F}" Directory_="net451_1_Dir" Attributes="0" KeyPath="NavigatorPalettes.exe_2"/>
@@ -1843,7 +1854,7 @@
     <ROW Component="NavigatorToolTips.exe" ComponentId="{97BC0C18-BF8A-4A54-A4E7-8A41D384C936}" Directory_="net35_1_Dir" Attributes="0" KeyPath="NavigatorToolTips.exe"/>
     <ROW Component="NavigatorToolTips.exe_1" ComponentId="{5B82FDE9-5B2A-49A7-AA0B-516AD74A8331}" Directory_="net45_1_Dir" Attributes="0" KeyPath="NavigatorToolTips.exe_1"/>
     <ROW Component="NavigatorToolTips.exe_10" ComponentId="{C9352D4F-F837-4C8E-9809-AA361FAF9958}" Directory_="net48_1_Dir" Attributes="0" KeyPath="NavigatorToolTips.exe_10"/>
-    <ROW Component="NavigatorToolTips.exe_11" ComponentId="{C0D7EA15-05E4-4487-A65F-CF5D96B7E3BC}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="NavigatorToolTips.pdb_11"/>
+    <ROW Component="NavigatorToolTips.exe_11" ComponentId="{C0D7EA15-05E4-4487-A65F-CF5D96B7E3BC}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="NavigatorToolTips.pdb_11" Type="4"/>
     <ROW Component="NavigatorToolTips.exe_12" ComponentId="{445838A2-97BC-458D-8B7A-73E7F3082EA6}" Directory_="netcoreapp3.1_1_Dir" Attributes="256" KeyPath="NavigatorToolTips.exe_12"/>
     <ROW Component="NavigatorToolTips.exe_13" ComponentId="{C3072C41-7D84-4869-9D9F-0194D911D050}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="NavigatorToolTips.exe_11"/>
     <ROW Component="NavigatorToolTips.exe_2" ComponentId="{117D9265-921D-4B54-9309-752EC9696A49}" Directory_="net451_1_Dir" Attributes="0" KeyPath="NavigatorToolTips.exe_2"/>
@@ -1864,7 +1875,7 @@
     <ROW Component="NavigatorandFloatingWindows.exe" ComponentId="{3DCE5B4F-0195-4A8C-9F1D-2BB1C5DAAF6A}" Directory_="net35_1_Dir" Attributes="0" KeyPath="NavigatorandFloatingWindows.exe"/>
     <ROW Component="NavigatorandFloatingWindows.exe_1" ComponentId="{9C24D58D-EB70-43CB-A1C9-D9ED0B3B0D88}" Directory_="net45_1_Dir" Attributes="0" KeyPath="NavigatorandFloatingWindows.exe_1"/>
     <ROW Component="NavigatorandFloatingWindows.exe_10" ComponentId="{76113C7B-5631-4F94-80B5-5E9601E8EECF}" Directory_="net48_1_Dir" Attributes="0" KeyPath="NavigatorandFloatingWindows.exe_10"/>
-    <ROW Component="NavigatorandFloatingWindows.exe_11" ComponentId="{FDE744FC-3F4A-4F5E-B59E-67E45FB715BC}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="NavigatorandFloatingWindows.pdb_11"/>
+    <ROW Component="NavigatorandFloatingWindows.exe_11" ComponentId="{FDE744FC-3F4A-4F5E-B59E-67E45FB715BC}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="NavigatorandFloatingWindows.pdb_11" Type="4"/>
     <ROW Component="NavigatorandFloatingWindows.exe_12" ComponentId="{2E7B56DC-8A86-45CF-8623-EC85A9EEAAF2}" Directory_="netcoreapp3.1_1_Dir" Attributes="256" KeyPath="NavigatorandFloatingWindows.exe_12"/>
     <ROW Component="NavigatorandFloatingWindows.exe_13" ComponentId="{8549B369-5A0B-4810-B193-9AEEC6E562CF}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="NavigatorandFloatingWindows.exe_11"/>
     <ROW Component="NavigatorandFloatingWindows.exe_2" ComponentId="{D4A08828-A97C-4D30-8448-C4F63EB73823}" Directory_="net451_1_Dir" Attributes="0" KeyPath="NavigatorandFloatingWindows.exe_2"/>
@@ -1907,7 +1918,7 @@
     <ROW Component="OrientationPlusAlignment.exe" ComponentId="{DCC5E885-9945-407D-B307-2BB2D5A4E01A}" Directory_="net35_1_Dir" Attributes="0" KeyPath="OrientationPlusAlignment.exe"/>
     <ROW Component="OrientationPlusAlignment.exe_1" ComponentId="{F502D20C-1E42-436F-80E9-DCD5C4DDE110}" Directory_="net45_1_Dir" Attributes="0" KeyPath="OrientationPlusAlignment.exe_1"/>
     <ROW Component="OrientationPlusAlignment.exe_10" ComponentId="{82604633-F996-47DC-8DE6-09E5E1214CA0}" Directory_="net48_1_Dir" Attributes="0" KeyPath="OrientationPlusAlignment.exe_10"/>
-    <ROW Component="OrientationPlusAlignment.exe_11" ComponentId="{80348053-21B4-4009-8A27-7E3E8C76CF27}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="OrientationPlusAlignment.pdb_11"/>
+    <ROW Component="OrientationPlusAlignment.exe_11" ComponentId="{80348053-21B4-4009-8A27-7E3E8C76CF27}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="OrientationPlusAlignment.pdb_11" Type="4"/>
     <ROW Component="OrientationPlusAlignment.exe_12" ComponentId="{63AD4746-5A67-4A75-A861-6EB6DC0997E7}" Directory_="netcoreapp3.1_1_Dir" Attributes="256" KeyPath="OrientationPlusAlignment.exe_12"/>
     <ROW Component="OrientationPlusAlignment.exe_13" ComponentId="{970FE081-9C88-4D07-AC04-0AF253C071FD}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="OrientationPlusAlignment.exe_11"/>
     <ROW Component="OrientationPlusAlignment.exe_2" ComponentId="{9A0F720E-9334-4AFF-90DE-20100CAEEFA1}" Directory_="net451_1_Dir" Attributes="0" KeyPath="OrientationPlusAlignment.exe_2"/>
@@ -1949,7 +1960,7 @@
     <ROW Component="OutlookMockup.exe" ComponentId="{8305DBF8-78F2-4BA4-A76F-A3C8062ECB75}" Directory_="net35_1_Dir" Attributes="0" KeyPath="OutlookMockup.exe"/>
     <ROW Component="OutlookMockup.exe_1" ComponentId="{FF06EF3F-4E07-40C0-9EF6-9133A22F4271}" Directory_="net45_1_Dir" Attributes="0" KeyPath="OutlookMockup.exe_1"/>
     <ROW Component="OutlookMockup.exe_10" ComponentId="{9DC247B8-48CE-4780-A9BE-A7AEA31036E2}" Directory_="net48_1_Dir" Attributes="0" KeyPath="OutlookMockup.exe_10"/>
-    <ROW Component="OutlookMockup.exe_11" ComponentId="{D0FDA235-35B2-4915-B317-24E2D27178DF}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="OutlookMockup.pdb_11"/>
+    <ROW Component="OutlookMockup.exe_11" ComponentId="{D0FDA235-35B2-4915-B317-24E2D27178DF}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="OutlookMockup.pdb_11" Type="4"/>
     <ROW Component="OutlookMockup.exe_12" ComponentId="{334E58F3-D1F4-4E3C-97E9-6947CEE83DAD}" Directory_="netcoreapp3.1_1_Dir" Attributes="256" KeyPath="OutlookMockup.exe_12"/>
     <ROW Component="OutlookMockup.exe_13" ComponentId="{73164F61-3EF1-4A08-9112-684C15D709C4}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="OutlookMockup.exe_11"/>
     <ROW Component="OutlookMockup.exe_2" ComponentId="{328C4F53-AB22-4E54-92B8-0C93588ED008}" Directory_="net451_1_Dir" Attributes="0" KeyPath="OutlookMockup.exe_2"/>
@@ -1970,7 +1981,7 @@
     <ROW Component="PaletteDesigner.exe" ComponentId="{F3B03369-2F06-40BF-8CD8-AF3C719E44EF}" Directory_="net35_1_Dir" Attributes="0" KeyPath="PaletteDesigner.exe"/>
     <ROW Component="PaletteDesigner.exe_1" ComponentId="{141DABED-44BE-43F0-8DA5-31CF53CDC84D}" Directory_="net45_1_Dir" Attributes="0" KeyPath="PaletteDesigner.exe_1"/>
     <ROW Component="PaletteDesigner.exe_10" ComponentId="{0817B54B-6D1F-431A-939F-54CFC34D6176}" Directory_="net48_1_Dir" Attributes="0" KeyPath="PaletteDesigner.exe_10"/>
-    <ROW Component="PaletteDesigner.exe_11" ComponentId="{00BDBBB8-2CA1-4ACA-9724-85C46FCF25FD}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="PaletteDesigner.pdb_11"/>
+    <ROW Component="PaletteDesigner.exe_11" ComponentId="{00BDBBB8-2CA1-4ACA-9724-85C46FCF25FD}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="PaletteDesigner.pdb_11" Type="4"/>
     <ROW Component="PaletteDesigner.exe_12" ComponentId="{F7FF6CDA-94E7-42DC-AAA4-97866EDED213}" Directory_="netcoreapp3.1_1_Dir" Attributes="256" KeyPath="PaletteDesigner.exe_12"/>
     <ROW Component="PaletteDesigner.exe_13" ComponentId="{8DE029E2-C2A8-4BD9-BBE9-90C2242DBF8F}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="PaletteDesigner.exe_11"/>
     <ROW Component="PaletteDesigner.exe_2" ComponentId="{9F5B3FFB-4752-462E-A2AC-49A7B0B1C1E9}" Directory_="net451_1_Dir" Attributes="0" KeyPath="PaletteDesigner.exe_2"/>
@@ -1991,7 +2002,7 @@
     <ROW Component="PaletteUpgradeTool.exe" ComponentId="{95349AE0-562B-486E-AF8F-E59B9CE7BFE3}" Directory_="net35_1_Dir" Attributes="0" KeyPath="PaletteUpgradeTool.exe"/>
     <ROW Component="PaletteUpgradeTool.exe_1" ComponentId="{F89C4648-D3AA-4415-A7F6-EAC08AAD0A29}" Directory_="net45_1_Dir" Attributes="0" KeyPath="PaletteUpgradeTool.exe_1"/>
     <ROW Component="PaletteUpgradeTool.exe_10" ComponentId="{E2C4F3EE-395F-4A5C-9F44-FD2B690F265B}" Directory_="net48_1_Dir" Attributes="0" KeyPath="PaletteUpgradeTool.exe_10"/>
-    <ROW Component="PaletteUpgradeTool.exe_11" ComponentId="{83AD6B91-B1F3-4463-B219-C39CA2629646}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="PaletteUpgradeTool.pdb_11"/>
+    <ROW Component="PaletteUpgradeTool.exe_11" ComponentId="{83AD6B91-B1F3-4463-B219-C39CA2629646}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="PaletteUpgradeTool.pdb_11" Type="4"/>
     <ROW Component="PaletteUpgradeTool.exe_12" ComponentId="{87D50425-F132-4EA6-AEC4-E78C73368410}" Directory_="netcoreapp3.1_1_Dir" Attributes="256" KeyPath="PaletteUpgradeTool.exe_12"/>
     <ROW Component="PaletteUpgradeTool.exe_13" ComponentId="{884C069A-1AA7-48BA-8C56-7130A05B9E55}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="PaletteUpgradeTool.exe_11"/>
     <ROW Component="PaletteUpgradeTool.exe_2" ComponentId="{7587F431-06C5-423F-A044-A14EAFE8BB34}" Directory_="net451_1_Dir" Attributes="0" KeyPath="PaletteUpgradeTool.exe_2"/>
@@ -2033,7 +2044,7 @@
     <ROW Component="PopupPages.exe" ComponentId="{DF46D660-91C1-4DD7-ABBA-420653213429}" Directory_="net35_1_Dir" Attributes="0" KeyPath="PopupPages.exe"/>
     <ROW Component="PopupPages.exe_1" ComponentId="{A1484517-E179-4503-9D21-7DE72D3B48AD}" Directory_="net45_1_Dir" Attributes="0" KeyPath="PopupPages.exe_1"/>
     <ROW Component="PopupPages.exe_10" ComponentId="{000BE279-1138-4387-8613-4034FC99FBAE}" Directory_="net48_1_Dir" Attributes="0" KeyPath="PopupPages.exe_10"/>
-    <ROW Component="PopupPages.exe_11" ComponentId="{3434FC68-8C57-4D76-9555-C39D282BBA1D}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="PopupPages.pdb_11"/>
+    <ROW Component="PopupPages.exe_11" ComponentId="{3434FC68-8C57-4D76-9555-C39D282BBA1D}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="PopupPages.pdb_11" Type="4"/>
     <ROW Component="PopupPages.exe_12" ComponentId="{5E495D6D-AB72-43B9-A067-C60B8DE80377}" Directory_="netcoreapp3.1_1_Dir" Attributes="256" KeyPath="PopupPages.exe_12"/>
     <ROW Component="PopupPages.exe_13" ComponentId="{1306972D-3785-46CC-8054-ECEF2557155E}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="PopupPages.exe_11"/>
     <ROW Component="PopupPages.exe_2" ComponentId="{3A99DCE0-7080-4C44-94F7-233A0815A6C7}" Directory_="net451_1_Dir" Attributes="0" KeyPath="PopupPages.exe_2"/>
@@ -2078,7 +2089,7 @@
     <ROW Component="RibbonControls.exe" ComponentId="{D0AB131D-8A95-49A1-967F-6B1A04478EAB}" Directory_="net35_1_Dir" Attributes="0" KeyPath="RibbonControls.exe"/>
     <ROW Component="RibbonControls.exe_1" ComponentId="{52AA79FB-C289-46AE-95CE-B4880BAC6A2E}" Directory_="net45_1_Dir" Attributes="0" KeyPath="RibbonControls.exe_1"/>
     <ROW Component="RibbonControls.exe_10" ComponentId="{EE0BA561-7B44-4C60-9C27-01DE9B7B36EF}" Directory_="net48_1_Dir" Attributes="0" KeyPath="RibbonControls.exe_10"/>
-    <ROW Component="RibbonControls.exe_11" ComponentId="{997A5138-1F8E-4ABD-82C8-592A07238882}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="RibbonControls.pdb_11"/>
+    <ROW Component="RibbonControls.exe_11" ComponentId="{997A5138-1F8E-4ABD-82C8-592A07238882}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="RibbonControls.pdb_11" Type="4"/>
     <ROW Component="RibbonControls.exe_12" ComponentId="{1DFC7EB5-B515-485F-9BDF-12E7710319A2}" Directory_="netcoreapp3.1_1_Dir" Attributes="256" KeyPath="RibbonControls.exe_12"/>
     <ROW Component="RibbonControls.exe_13" ComponentId="{624AD78E-BEEB-4EAF-81F3-59814C93ECBA}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="RibbonControls.exe_11"/>
     <ROW Component="RibbonControls.exe_2" ComponentId="{F81B04F3-B962-4EE8-ACE2-EA2342F5CED5}" Directory_="net451_1_Dir" Attributes="0" KeyPath="RibbonControls.exe_2"/>
@@ -2120,7 +2131,7 @@
     <ROW Component="RibbonToolTips.exe" ComponentId="{48A48B05-C593-4DA4-A827-AD368689A73B}" Directory_="net35_1_Dir" Attributes="0" KeyPath="RibbonToolTips.exe"/>
     <ROW Component="RibbonToolTips.exe_1" ComponentId="{6395D293-E18B-49C9-A9AD-D819D6F671C0}" Directory_="net45_1_Dir" Attributes="0" KeyPath="RibbonToolTips.exe_1"/>
     <ROW Component="RibbonToolTips.exe_10" ComponentId="{B1C7526F-7772-4637-96AF-A3389AE94D53}" Directory_="net48_1_Dir" Attributes="0" KeyPath="RibbonToolTips.exe_10"/>
-    <ROW Component="RibbonToolTips.exe_11" ComponentId="{8A8787A1-14B0-47AE-9820-85AA1EF1FD0E}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="RibbonToolTips.pdb_11"/>
+    <ROW Component="RibbonToolTips.exe_11" ComponentId="{8A8787A1-14B0-47AE-9820-85AA1EF1FD0E}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="RibbonToolTips.pdb_11" Type="4"/>
     <ROW Component="RibbonToolTips.exe_12" ComponentId="{E187F662-CC8D-4ADB-AFEC-D89CA01AA24F}" Directory_="netcoreapp3.1_1_Dir" Attributes="256" KeyPath="RibbonToolTips.exe_12"/>
     <ROW Component="RibbonToolTips.exe_13" ComponentId="{721E4767-E4CD-4DF1-BDB9-DF88AFA0C59D}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="RibbonToolTips.exe_11"/>
     <ROW Component="RibbonToolTips.exe_2" ComponentId="{2A70EE55-B135-4E6A-A6A4-31669C087D35}" Directory_="net451_1_Dir" Attributes="0" KeyPath="RibbonToolTips.exe_2"/>
@@ -2207,7 +2218,7 @@
     <ROW Component="SystemThemedForms.exe" ComponentId="{806BB4DE-AEAF-4677-9BA5-35DACA3218A2}" Directory_="net35_1_Dir" Attributes="0" KeyPath="SystemThemedForms.exe"/>
     <ROW Component="SystemThemedForms.exe_1" ComponentId="{B7BD40DB-9398-4C8C-A4FF-ED846C7FF1C6}" Directory_="net45_1_Dir" Attributes="0" KeyPath="SystemThemedForms.exe_1"/>
     <ROW Component="SystemThemedForms.exe_10" ComponentId="{719DFF59-BB36-4EBB-A2D7-147A6728E9B5}" Directory_="net48_1_Dir" Attributes="0" KeyPath="SystemThemedForms.exe_10"/>
-    <ROW Component="SystemThemedForms.exe_11" ComponentId="{EC999235-8800-474D-8E0C-D3A0509D0393}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="SystemThemedForms.pdb_11"/>
+    <ROW Component="SystemThemedForms.exe_11" ComponentId="{EC999235-8800-474D-8E0C-D3A0509D0393}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="SystemThemedForms.pdb_11" Type="4"/>
     <ROW Component="SystemThemedForms.exe_12" ComponentId="{0EFECB6E-BA62-488D-B5A7-4408E39D79A8}" Directory_="netcoreapp3.1_1_Dir" Attributes="256" KeyPath="SystemThemedForms.exe_12"/>
     <ROW Component="SystemThemedForms.exe_13" ComponentId="{21F0BC0E-71FB-4574-B6AE-9046108644FD}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="SystemThemedForms.exe_11"/>
     <ROW Component="SystemThemedForms.exe_2" ComponentId="{28C9BAEB-58F3-43E4-B8C4-FFFDC4CFF5D1}" Directory_="net451_1_Dir" Attributes="0" KeyPath="SystemThemedForms.exe_2"/>
@@ -2271,7 +2282,7 @@
     <ROW Component="TestMessageBoxClipping.exe" ComponentId="{89051D6A-3C7E-4BE0-A209-7FD0E1126B39}" Directory_="net35_1_Dir" Attributes="0" KeyPath="TestMessageBoxClipping.exe"/>
     <ROW Component="TestMessageBoxClipping.exe_1" ComponentId="{216E1E2B-52CA-43DA-A669-80E8FB702774}" Directory_="net45_1_Dir" Attributes="0" KeyPath="TestMessageBoxClipping.exe_1"/>
     <ROW Component="TestMessageBoxClipping.exe_10" ComponentId="{40DB7D8D-D10D-4E06-8306-CFFD82D18458}" Directory_="net48_1_Dir" Attributes="0" KeyPath="TestMessageBoxClipping.exe_10"/>
-    <ROW Component="TestMessageBoxClipping.exe_11" ComponentId="{72E09E59-1BB3-44CB-8107-6A963B5A82B6}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="TestMessageBoxClipping.pdb_11"/>
+    <ROW Component="TestMessageBoxClipping.exe_11" ComponentId="{72E09E59-1BB3-44CB-8107-6A963B5A82B6}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="TestMessageBoxClipping.pdb_11" Type="4"/>
     <ROW Component="TestMessageBoxClipping.exe_12" ComponentId="{5A0D1BF7-749F-4276-8F3D-7292BE136E46}" Directory_="netcoreapp3.1_1_Dir" Attributes="256" KeyPath="TestMessageBoxClipping.exe_12"/>
     <ROW Component="TestMessageBoxClipping.exe_13" ComponentId="{BCF222C9-66A3-4A65-903D-99C707060094}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="TestMessageBoxClipping.exe_11"/>
     <ROW Component="TestMessageBoxClipping.exe_2" ComponentId="{716FF262-6F62-4381-979F-D5263FB1DCEF}" Directory_="net451_1_Dir" Attributes="0" KeyPath="TestMessageBoxClipping.exe_2"/>
@@ -2334,7 +2345,7 @@
     <ROW Component="ThreePaneApplicationExtended.exe" ComponentId="{CB28706F-18B6-42CD-8789-1FEE9843F830}" Directory_="net35_1_Dir" Attributes="0" KeyPath="ThreePaneApplicationExtended.exe"/>
     <ROW Component="ThreePaneApplicationExtended.exe_1" ComponentId="{323B418A-5B82-4512-8C36-9C86B3C0A985}" Directory_="net45_1_Dir" Attributes="0" KeyPath="ThreePaneApplicationExtended.exe_1"/>
     <ROW Component="ThreePaneApplicationExtended.exe_10" ComponentId="{31B8B680-7F70-4B78-95FB-15D2DE0ACD91}" Directory_="net48_1_Dir" Attributes="0" KeyPath="ThreePaneApplicationExtended.exe_10"/>
-    <ROW Component="ThreePaneApplicationExtended.exe_11" ComponentId="{01E0B8B7-24C2-493B-9EF1-DE8C86055C09}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="ThreePaneApplicationExtended.pdb_11"/>
+    <ROW Component="ThreePaneApplicationExtended.exe_11" ComponentId="{01E0B8B7-24C2-493B-9EF1-DE8C86055C09}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="ThreePaneApplicationExtended.pdb_11" Type="4"/>
     <ROW Component="ThreePaneApplicationExtended.exe_12" ComponentId="{341E7021-998E-4033-9225-AB33183F40E9}" Directory_="netcoreapp3.1_1_Dir" Attributes="256" KeyPath="ThreePaneApplicationExtended.exe_12"/>
     <ROW Component="ThreePaneApplicationExtended.exe_13" ComponentId="{B7F4A810-D3C0-4153-A078-FB4281EB08BA}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="ThreePaneApplicationExtended.exe_11"/>
     <ROW Component="ThreePaneApplicationExtended.exe_2" ComponentId="{B11C9399-6C19-48BC-84E0-BD956B82457B}" Directory_="net451_1_Dir" Attributes="0" KeyPath="ThreePaneApplicationExtended.exe_2"/>
@@ -2355,7 +2366,7 @@
     <ROW Component="UserPageCreation.exe" ComponentId="{6B13BBBA-3017-4BF8-BE6F-39885CBC05A6}" Directory_="net35_1_Dir" Attributes="0" KeyPath="UserPageCreation.exe"/>
     <ROW Component="UserPageCreation.exe_1" ComponentId="{8380E359-F262-4608-90F9-D20FA61007D9}" Directory_="net45_1_Dir" Attributes="0" KeyPath="UserPageCreation.exe_1"/>
     <ROW Component="UserPageCreation.exe_10" ComponentId="{9685140B-E907-4D4F-9633-ECF97E5DA716}" Directory_="net48_1_Dir" Attributes="0" KeyPath="UserPageCreation.exe_10"/>
-    <ROW Component="UserPageCreation.exe_11" ComponentId="{18F93B18-52AD-4D9F-9C15-561F74EED7CA}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="UserPageCreation.pdb_11"/>
+    <ROW Component="UserPageCreation.exe_11" ComponentId="{18F93B18-52AD-4D9F-9C15-561F74EED7CA}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="UserPageCreation.pdb_11" Type="4"/>
     <ROW Component="UserPageCreation.exe_12" ComponentId="{42268863-4234-4332-AFC0-2231CB0242AA}" Directory_="netcoreapp3.1_1_Dir" Attributes="256" KeyPath="UserPageCreation.exe_12"/>
     <ROW Component="UserPageCreation.exe_13" ComponentId="{0031CD52-72AE-496E-BACD-B37529283397}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="UserPageCreation.exe_11"/>
     <ROW Component="UserPageCreation.exe_2" ComponentId="{C4585E19-F9E7-4184-93E7-F645132C550E}" Directory_="net451_1_Dir" Attributes="0" KeyPath="UserPageCreation.exe_2"/>
@@ -2378,7 +2389,7 @@
     <ROW Component="WorkspaceCellLayout.exe" ComponentId="{8F06F99D-D5A0-4420-B0F0-3074F8CA9DB7}" Directory_="net35_1_Dir" Attributes="0" KeyPath="WorkspaceCellLayout.exe"/>
     <ROW Component="WorkspaceCellLayout.exe_1" ComponentId="{D164AC8C-2BD2-477F-B4BF-EFFE34E1094D}" Directory_="net45_1_Dir" Attributes="0" KeyPath="WorkspaceCellLayout.exe_1"/>
     <ROW Component="WorkspaceCellLayout.exe_10" ComponentId="{6E5FD38E-BAC2-48BA-80E9-BE0AB5371E5E}" Directory_="net48_1_Dir" Attributes="0" KeyPath="WorkspaceCellLayout.exe_10"/>
-    <ROW Component="WorkspaceCellLayout.exe_11" ComponentId="{4BDD133D-3B6E-4A27-9B8E-AD16E45B8106}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="WorkspaceCellLayout.pdb_11"/>
+    <ROW Component="WorkspaceCellLayout.exe_11" ComponentId="{4BDD133D-3B6E-4A27-9B8E-AD16E45B8106}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="WorkspaceCellLayout.pdb_11" Type="4"/>
     <ROW Component="WorkspaceCellLayout.exe_12" ComponentId="{D72B6444-9C27-435C-9838-AA15042CD643}" Directory_="netcoreapp3.1_1_Dir" Attributes="256" KeyPath="WorkspaceCellLayout.exe_12"/>
     <ROW Component="WorkspaceCellLayout.exe_13" ComponentId="{0C943EA3-82E1-4EA4-9BE3-F0B0DE794178}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="WorkspaceCellLayout.exe_11"/>
     <ROW Component="WorkspaceCellLayout.exe_2" ComponentId="{5D1043E5-BB4E-4B6D-A6E7-9797D2BD4C86}" Directory_="net451_1_Dir" Attributes="0" KeyPath="WorkspaceCellLayout.exe_2"/>
@@ -2399,7 +2410,7 @@
     <ROW Component="WorkspaceCellModes.exe" ComponentId="{4B8F92D7-2469-45F1-92E2-65314E385A5F}" Directory_="net35_1_Dir" Attributes="0" KeyPath="WorkspaceCellModes.exe"/>
     <ROW Component="WorkspaceCellModes.exe_1" ComponentId="{EAB9B3E0-1C90-4BC6-A55E-AFBAE635B08E}" Directory_="net45_1_Dir" Attributes="0" KeyPath="WorkspaceCellModes.exe_1"/>
     <ROW Component="WorkspaceCellModes.exe_10" ComponentId="{B4A8A482-D61F-4D32-8A12-6B7A46D1A9F2}" Directory_="net48_1_Dir" Attributes="0" KeyPath="WorkspaceCellModes.exe_10"/>
-    <ROW Component="WorkspaceCellModes.exe_11" ComponentId="{ACFA464D-FCA8-4F26-BD42-20682A8EB172}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="WorkspaceCellModes.pdb_11"/>
+    <ROW Component="WorkspaceCellModes.exe_11" ComponentId="{ACFA464D-FCA8-4F26-BD42-20682A8EB172}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="WorkspaceCellModes.pdb_11" Type="4"/>
     <ROW Component="WorkspaceCellModes.exe_12" ComponentId="{57127B9E-1BFA-4DC2-9DC7-A481BA5F09A8}" Directory_="netcoreapp3.1_1_Dir" Attributes="256" KeyPath="WorkspaceCellModes.exe_12"/>
     <ROW Component="WorkspaceCellModes.exe_13" ComponentId="{9F982E9D-A30F-48F4-869D-B8F209624D95}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="WorkspaceCellModes.exe_11"/>
     <ROW Component="WorkspaceCellModes.exe_2" ComponentId="{C076A071-6051-4E18-8ABD-B70ABB8F0BCB}" Directory_="net451_1_Dir" Attributes="0" KeyPath="WorkspaceCellModes.exe_2"/>
@@ -2420,7 +2431,7 @@
     <ROW Component="WorkspacePersistence.exe" ComponentId="{658D0C17-6A7B-428A-8F29-BAE7CC3A1BE9}" Directory_="net35_1_Dir" Attributes="0" KeyPath="WorkspacePersistence.exe"/>
     <ROW Component="WorkspacePersistence.exe_1" ComponentId="{09E47014-64DB-4D43-9726-6C7F49B32280}" Directory_="net45_1_Dir" Attributes="0" KeyPath="WorkspacePersistence.exe_1"/>
     <ROW Component="WorkspacePersistence.exe_10" ComponentId="{5D861069-C548-461E-B7EC-B9FDC2768EC9}" Directory_="net48_1_Dir" Attributes="0" KeyPath="WorkspacePersistence.exe_10"/>
-    <ROW Component="WorkspacePersistence.exe_11" ComponentId="{F4F4A789-45EB-4DA1-B49B-32E39DC1D2E5}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="WorkspacePersistence.pdb_11"/>
+    <ROW Component="WorkspacePersistence.exe_11" ComponentId="{F4F4A789-45EB-4DA1-B49B-32E39DC1D2E5}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="WorkspacePersistence.pdb_11" Type="4"/>
     <ROW Component="WorkspacePersistence.exe_12" ComponentId="{3515232F-E9BE-480B-B0AC-BB7D6E4A4DDC}" Directory_="netcoreapp3.1_1_Dir" Attributes="256" KeyPath="WorkspacePersistence.exe_12"/>
     <ROW Component="WorkspacePersistence.exe_13" ComponentId="{BC03D5D2-F2A3-484C-A510-F533808D7F93}" Directory_="net5.0windows_1_Dir" Attributes="256" KeyPath="WorkspacePersistence.exe_11"/>
     <ROW Component="WorkspacePersistence.exe_2" ComponentId="{9993AC63-9B2B-4E73-AF38-E327654C9DAA}" Directory_="net451_1_Dir" Attributes="0" KeyPath="WorkspacePersistence.exe_2"/>
@@ -7500,7 +7511,6 @@
     <ROW File="WorkspacePersistence.pdb_12" Component_="WorkspacePersistence.exe_12" FileName="WORKSP~3.PDB|Workspace Persistence.pdb" Attributes="0" SourcePath="P:\Development\Krypton Releases\Current\Binaries\Examples\netcoreapp3.1\Workspace Persistence.pdb" SelfReg="false"/>
     <ROW File="WorkspacePersistence.runtimeconfig.dev.json_1" Component_="AdvancedPageDragandDrop.deps.json_1" FileName="WORKSP~8.JSO|Workspace Persistence.runtimeconfig.dev.json" Attributes="0" SourcePath="P:\Development\Krypton Releases\Current\Binaries\Examples\netcoreapp3.1\Workspace Persistence.runtimeconfig.dev.json" SelfReg="false"/>
     <ROW File="WorkspacePersistence.runtimeconfig.json_1" Component_="AdvancedPageDragandDrop.deps.json_1" FileName="WORKSP~9.JSO|Workspace Persistence.runtimeconfig.json" Attributes="0" SourcePath="P:\Development\Krypton Releases\Current\Binaries\Examples\netcoreapp3.1\Workspace Persistence.runtimeconfig.json" SelfReg="false"/>
-    <ROW File="KryptonToolkitHelp.chm" Component_="KryptonToolkitHelp.chm" FileName="KRYPTO~1.CHM|Krypton Toolkit Help.chm" Attributes="0" SourcePath="P:\Development\Krypton Releases\Current\Help\Krypton Toolkit Help.chm" SelfReg="false"/>
     <ROW File="License.rtf" Component_="License.rtf" FileName="License.rtf" Attributes="0" SourcePath="P:\Development\Krypton Releases\Current\License\License.rtf" SelfReg="false"/>
     <ROW File="AdobeCCDarkbyByte7189.xml" Component_="AdobeCCDarkbyByte7189.xml" FileName="ADOBEC~1.XML|Adobe CC Dark by Byte#7189.xml" Attributes="0" SourcePath="P:\Development\Krypton Releases\Current\Themes\Community\Themes by Byte#7189\Adobe CC Dark by Byte#7189.xml" SelfReg="false"/>
     <ROW File="AdobeCCDarkwithOrangePurpleV1StatusStripbyByte7189.xml" Component_="AdobeCCDarkbyByte7189.xml" FileName="ADOBEC~2.XML|Adobe CC Dark with Orange &amp; Purple V1 Status Strip by Byte#7189.xml" Attributes="0" SourcePath="P:\Development\Krypton Releases\Current\Themes\Community\Themes by Byte#7189\Adobe CC Dark with Orange &amp; Purple V1 Status Strip by Byte#7189.xml" SelfReg="false"/>
@@ -7603,6 +7613,25 @@
     <ROW File="KryptonToolkitSuiteWorkspaceModule.url" Component_="KryptonToolkitSuiteCoreLiteModule.url" FileName="KRYPT~10.URL|Krypton Toolkit Suite - Workspace Module.url" Attributes="0" SourcePath="P:\Development\Krypton Releases\Current\WebLinks\NuGet\Krypton Toolkit Suite - Workspace Module.url" SelfReg="false"/>
     <ROW File="OnlineHelp.url" Component_="OnlineHelp.url" FileName="ONLINE~1.URL|Online Help.url" Attributes="0" SourcePath="P:\Development\Krypton Releases\Current\WebLinks\Online Help.url" SelfReg="false"/>
     <ROW File="ProjectHomepage.url" Component_="ProjectHomepage.url" FileName="PROJEC~1.URL|Project Homepage.url" Attributes="0" SourcePath="P:\Development\Krypton Releases\Current\WebLinks\Project Homepage.url" SelfReg="false"/>
+    <ROW File="Krypton.Docking.deps.json_2" Component_="Krypton.Docking.deps.json_2" FileName="KRYPTO~1.JSO|Krypton.Docking.deps.json" Attributes="0" SourcePath="P:\Development\Krypton Releases\Current\Binaries\DLLs\netcoreapp3.0\Krypton.Docking.deps.json" SelfReg="false"/>
+    <ROW File="Krypton.Docking.dll_28" Component_="Krypton.Docking.dll_28" FileName="KRYPTO~1.DLL|Krypton.Docking.dll" Attributes="0" SourcePath="P:\Development\Krypton Releases\Current\Binaries\DLLs\netcoreapp3.0\Krypton.Docking.dll" SelfReg="false"/>
+    <ROW File="Krypton.Docking.pdb_14" Component_="Krypton.Docking.dll_28" FileName="KRYPTO~1.PDB|Krypton.Docking.pdb" Attributes="0" SourcePath="P:\Development\Krypton Releases\Current\Binaries\DLLs\netcoreapp3.0\Krypton.Docking.pdb" SelfReg="false"/>
+    <ROW File="Krypton.Docking.xml_14" Component_="Krypton.Docking.deps.json_2" FileName="KRYPTO~1.XML|Krypton.Docking.xml" Attributes="0" SourcePath="P:\Development\Krypton Releases\Current\Binaries\DLLs\netcoreapp3.0\Krypton.Docking.xml" SelfReg="false"/>
+    <ROW File="Krypton.Navigator.dll_28" Component_="Krypton.Navigator.dll_28" FileName="KRYPTO~2.DLL|Krypton.Navigator.dll" Attributes="0" SourcePath="P:\Development\Krypton Releases\Current\Binaries\DLLs\netcoreapp3.0\Krypton.Navigator.dll" SelfReg="false"/>
+    <ROW File="Krypton.Navigator.pdb_14" Component_="Krypton.Navigator.dll_28" FileName="KRYPTO~2.PDB|Krypton.Navigator.pdb" Attributes="0" SourcePath="P:\Development\Krypton Releases\Current\Binaries\DLLs\netcoreapp3.0\Krypton.Navigator.pdb" SelfReg="false"/>
+    <ROW File="Krypton.Navigator.xml_14" Component_="Krypton.Docking.deps.json_2" FileName="KRYPTO~2.XML|Krypton.Navigator.xml" Attributes="0" SourcePath="P:\Development\Krypton Releases\Current\Binaries\DLLs\netcoreapp3.0\Krypton.Navigator.xml" SelfReg="false"/>
+    <ROW File="Krypton.Toolkit.dll_28" Component_="Krypton.Toolkit.dll_28" FileName="KRYPTO~3.DLL|Krypton.Toolkit.dll" Attributes="0" SourcePath="P:\Development\Krypton Releases\Current\Binaries\DLLs\netcoreapp3.0\Krypton.Toolkit.dll" SelfReg="false"/>
+    <ROW File="Krypton.Toolkit.pdb_14" Component_="Krypton.Toolkit.dll_28" FileName="KRYPTO~3.PDB|Krypton.Toolkit.pdb" Attributes="0" SourcePath="P:\Development\Krypton Releases\Current\Binaries\DLLs\netcoreapp3.0\Krypton.Toolkit.pdb" SelfReg="false"/>
+    <ROW File="Krypton.Toolkit.xml_14" Component_="Krypton.Docking.deps.json_2" FileName="KRYPTO~3.XML|Krypton.Toolkit.xml" Attributes="0" SourcePath="P:\Development\Krypton Releases\Current\Binaries\DLLs\netcoreapp3.0\Krypton.Toolkit.xml" SelfReg="false"/>
+    <ROW File="Krypton.Workspace.dll_28" Component_="Krypton.Workspace.dll_28" FileName="KRYPTO~4.DLL|Krypton.Workspace.dll" Attributes="0" SourcePath="P:\Development\Krypton Releases\Current\Binaries\DLLs\netcoreapp3.0\Krypton.Workspace.dll" SelfReg="false"/>
+    <ROW File="Krypton.Workspace.pdb_14" Component_="Krypton.Workspace.dll_28" FileName="KRYPTO~4.PDB|Krypton.Workspace.pdb" Attributes="0" SourcePath="P:\Development\Krypton Releases\Current\Binaries\DLLs\netcoreapp3.0\Krypton.Workspace.pdb" SelfReg="false"/>
+    <ROW File="Krypton.Workspace.xml_14" Component_="Krypton.Docking.deps.json_2" FileName="KRYPTO~4.XML|Krypton.Workspace.xml" Attributes="0" SourcePath="P:\Development\Krypton Releases\Current\Binaries\DLLs\netcoreapp3.0\Krypton.Workspace.xml" SelfReg="false"/>
+    <ROW File="HelpLibraryManagerLauncher.exe" Component_="HelpLibraryManagerLauncher.exe" FileName="HELPLI~1.EXE|HelpLibraryManagerLauncher.exe" Attributes="0" SourcePath="P:\Development\Krypton Releases\Current\Help\Help Library\HelpLibraryManagerLauncher.exe" SelfReg="false"/>
+    <ROW File="Install_StandardToolkitDocumentation.bat" Component_="Install_StandardToolkitDocumentation.bat" FileName="INSTAL~1.BAT|Install_Standard Toolkit Documentation.bat" Attributes="0" SourcePath="P:\Development\Krypton Releases\Current\Help\Help Library\Install_Standard Toolkit Documentation.bat" SelfReg="false"/>
+    <ROW File="Remove_StandardToolkitDocumentation.bat" Component_="Install_StandardToolkitDocumentation.bat" FileName="REMOVE~1.BAT|Remove_Standard Toolkit Documentation.bat" Attributes="0" SourcePath="P:\Development\Krypton Releases\Current\Help\Help Library\Remove_Standard Toolkit Documentation.bat" SelfReg="false"/>
+    <ROW File="StandardToolkitDocumentation.msha" Component_="Install_StandardToolkitDocumentation.bat" FileName="STANDA~1.MSH|Standard Toolkit Documentation.msha" Attributes="0" SourcePath="P:\Development\Krypton Releases\Current\Help\Help Library\Standard Toolkit Documentation.msha" SelfReg="false"/>
+    <ROW File="StandardToolkitDocumentation.mshc" Component_="Install_StandardToolkitDocumentation.bat" FileName="STANDA~2.MSH|Standard Toolkit Documentation.mshc" Attributes="0" SourcePath="P:\Development\Krypton Releases\Current\Help\Help Library\Standard Toolkit Documentation.mshc" SelfReg="false"/>
+    <ROW File="StandardToolkitDocumentation.chm" Component_="KryptonToolkitHelp.chm" FileName="STANDA~1.CHM|Standard Toolkit Documentation.chm" Attributes="0" SourcePath="P:\Development\Krypton Releases\Current\Help\Standard Toolkit Documentation.chm" SelfReg="false"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.BootstrOptComponent">
     <ROW BootstrOptKey="GlobalOptions" GeneralOptions="b" DownloadFolder="[AppDataFolder][|Manufacturer]\[|ProductName]\prerequisites" Options="2"/>
@@ -7611,12 +7640,13 @@
     <ROW Action="AI_DetectSoftware" Sequence="151"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.BuildComponent">
-    <ROW BuildKey="DefaultBuild" BuildName="DefaultBuild" BuildOrder="1" BuildType="1" PackageFolder="Setup Files" Languages="en_GB;fr" LangOpt="1" InstallationType="4" CabsLocation="1" PackageType="1" FilesInsideExe="true" ExeIconPath="T:\Development\Krypton\Standard-Toolkit\Assets\ICO\Main Icon\48 x 48\Square Design 48 x 48 Green.ico" ExtractionFolder="[AppDataFolder][|Manufacturer]\[|ProductName] [|ProductVersion]\install" ExtUI="true" Options="4" UseLargeSchema="true"/>
+    <ROW BuildKey="DefaultBuild" BuildName="DefaultBuild" BuildOrder="1" BuildType="1" PackageFolder="Setup Files" Languages="en_GB;fr" LangOpt="1" InstallationType="4" CabsLocation="1" PackageType="1" FilesInsideExe="true" ExeIconPath="..\..\..\Standard-Toolkit\Assets\ICO\Main Icon\48 x 48\Square Design 48 x 48 Green.ico" ExtractionFolder="[AppDataFolder][|Manufacturer]\[|ProductName] [|ProductVersion]\install" ExtUI="true" Options="4" UseLargeSchema="true"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.DictionaryComponent">
     <ROW Path="&lt;AI_DICTS&gt;ui.ail"/>
     <ROW Path="&lt;AI_DICTS&gt;ui_en_GB.ail"/>
     <ROW Path="&lt;AI_DICTS&gt;ui_fr.ail"/>
+    <ROW Path="&lt;AI_DICTS&gt;ui_en.ail"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.FragmentComponent">
     <ROW Fragment="CommonUI.aip" Path="&lt;AI_FRAGS&gt;CommonUI.aip"/>
@@ -7650,7 +7680,7 @@
     <ROW Name="ExternalUICleaner.dll" SourcePath="&lt;AI_CUSTACTS&gt;ExternalUICleaner.dll"/>
     <ROW Name="Prereq.dll" SourcePath="&lt;AI_CUSTACTS&gt;Prereq.dll"/>
     <ROW Name="SoftwareDetector.dll" SourcePath="&lt;AI_CUSTACTS&gt;SoftwareDetector.dll"/>
-    <ROW Name="SquareDesign48x48Green.bmp" SourcePath="T:\Development\Krypton\Standard-Toolkit\Assets\BMP\48 x 48\Square Design 48 x 48 Green.bmp"/>
+    <ROW Name="SquareDesign48x48Green.bmp" SourcePath="..\..\..\Standard-Toolkit\Assets\BMP\48 x 48\Square Design 48 x 48 Green.bmp"/>
     <ROW Name="aicustact.dll" SourcePath="&lt;AI_CUSTACTS&gt;aicustact.dll"/>
     <ROW Name="lzmaextractor.dll" SourcePath="&lt;AI_CUSTACTS&gt;lzmaextractor.dll"/>
   </COMPONENT>
@@ -10113,9 +10143,16 @@
     <ROW Feature_="MainFeature" Component_="ProjectHomepage.url"/>
     <ROW Feature_="MainFeature" Component_="ProjectTemplates"/>
     <ROW Feature_="MainFeature" Component_="VisualBasic"/>
+    <ROW Feature_="MainFeature" Component_="Krypton.Docking.deps.json_2"/>
+    <ROW Feature_="MainFeature" Component_="Krypton.Docking.dll_28"/>
+    <ROW Feature_="MainFeature" Component_="Krypton.Navigator.dll_28"/>
+    <ROW Feature_="MainFeature" Component_="Krypton.Toolkit.dll_28"/>
+    <ROW Feature_="MainFeature" Component_="Krypton.Workspace.dll_28"/>
+    <ROW Feature_="MainFeature" Component_="HelpLibraryManagerLauncher.exe"/>
+    <ROW Feature_="MainFeature" Component_="Install_StandardToolkitDocumentation.bat"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiIconsComponent">
-    <ROW Name="SquareDesign48x48Green.exe" SourcePath="T:\Development\Krypton\Standard-Toolkit\Assets\ICO\Main Icon\48 x 48\Square Design 48 x 48 Green.ico" Index="0"/>
+    <ROW Name="SquareDesign48x48Green.exe" SourcePath="..\..\..\Standard-Toolkit\Assets\ICO\Main Icon\48 x 48\Square Design 48 x 48 Green.ico" Index="0"/>
     <ROW Name="SystemFoldermsiexec.exe" SourcePath="&lt;AI_RES&gt;uninstall.ico" Index="0"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiInstExSeqComponent">
@@ -10197,7 +10234,6 @@
     <ROW Shortcut="JoinourDiscordServer" Directory_="SHORTCUTDIR" Name="JOINOU~1|Join our Discord Server" Component_="JoinourDiscordServer.url" Target="[#JoinourDiscordServer.url]" Hotkey="0" IconIndex="0" ShowCmd="1" WkDir="WebLinks_Dir"/>
     <ROW Shortcut="KryptonExplorer" Directory_="SHORTCUTDIR" Name="KRYPTO~1|Krypton Explorer" Component_="KryptonExplorer.exe_11" Target="[#KryptonExplorer.exe_11]" Hotkey="0" IconIndex="0" ShowCmd="1" WkDir="net5.0windows_1_Dir"/>
     <ROW Shortcut="KryptonExplorer_1" Directory_="DesktopFolder" Name="KRYPTO~1|Krypton Explorer" Component_="KryptonExplorer.exe_11" Target="[#KryptonExplorer.exe_11]" Hotkey="0" IconIndex="0" ShowCmd="1" WkDir="net5.0windows_1_Dir"/>
-    <ROW Shortcut="KryptonToolkitHelp" Directory_="SHORTCUTDIR" Name="KRYPTO~2|Krypton Toolkit Help" Component_="KryptonToolkitHelp.chm" Target="[#KryptonToolkitHelp.chm]" Hotkey="0" IconIndex="0" ShowCmd="1" WkDir="Help_Dir"/>
     <ROW Shortcut="KryptonToolkitTemplates" Directory_="SHORTCUTDIR" Name="KRYPTO~3|Krypton Toolkit Templates" Component_="KryptonToolkitTemplates.url" Target="[#KryptonToolkitTemplates.url]" Hotkey="0" IconIndex="0" ShowCmd="1" WkDir="WebLinks_Dir"/>
     <ROW Shortcut="OnlineHelp" Directory_="SHORTCUTDIR" Name="ONLINE~1|Online Help" Component_="OnlineHelp.url" Target="[#OnlineHelp.url]" Hotkey="0" IconIndex="0" ShowCmd="1" WkDir="WebLinks_Dir"/>
     <ROW Shortcut="PaletteDesigner" Directory_="SHORTCUTDIR" Name="PALETT~1|Palette Designer" Component_="PaletteDesigner.exe_13" Target="[#PaletteDesigner.exe_11]" Hotkey="0" IconIndex="0" ShowCmd="1" WkDir="net5.0windows_1_Dir"/>
@@ -10220,6 +10256,6 @@
     <ROW SearchKey="B96F93FA27E74B02866727AAE83982D0Release" Prereq="B96F93FA27E74B02866727AAE83982D0" SearchType="9" SearchString="HKLM\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full\Release" RefContent="G528048" Order="1" Property="PreReqSearch_B96F93FA27E74B02866727"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.SynchronizedFolderComponent">
-    <ROW Directory_="APPDIR" SourcePath="P:\Development\Krypton Releases\Current" ExcludePattern="*~|#*#|%*%|._|CVS|.cvsignore|SCCS|vssver.scc|mssccprj.scc|vssver2.scc|.svn|.DS_Store" ExcludeFlags="6"/>
+    <ROW Directory_="APPDIR" SourcePath="P:\Development\Krypton Releases\Current" Feature="MainFeature" ExcludePattern="*~|#*#|%*%|._|CVS|.cvsignore|SCCS|vssver.scc|mssccprj.scc|vssver2.scc|.svn|.DS_Store" ExcludeFlags="6"/>
   </COMPONENT>
 </DOCUMENT>

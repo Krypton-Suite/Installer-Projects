@@ -352,3 +352,5 @@ MigrationBackup/
 *.msi
 *.exe
 *.ini
+*.txt
+*.aip
