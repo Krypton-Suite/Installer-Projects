@@ -1,0 +1,39 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31220.234
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{930C7802-8A8C-48F9-8165-68863BCCD9DD}") = "Krypton Extended Toolkit Help", "Krypton Extended Toolkit Help\Krypton Extended Toolkit Help.wixproj", "{E456E870-4498-43CF-A21D-DB953E012359}"
+EndProject
+Project("{7CF6DF6D-3B04-46F8-A40B-537D21BCA0B4}") = "Full Extended Toolkit Documentation", "..\..\..\..\Help-Files\Source\Extended Toolkit\Full Documentation\Full Extended Toolkit Documentation\Full Extended Toolkit Documentation.shfbproj", "{0648D4EC-A95F-4EA0-9F37-1967ADA609E6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E456E870-4498-43CF-A21D-DB953E012359}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{E456E870-4498-43CF-A21D-DB953E012359}.Debug|x86.ActiveCfg = Debug|x86
+		{E456E870-4498-43CF-A21D-DB953E012359}.Debug|x86.Build.0 = Debug|x86
+		{E456E870-4498-43CF-A21D-DB953E012359}.Release|Any CPU.ActiveCfg = Release|x86
+		{E456E870-4498-43CF-A21D-DB953E012359}.Release|x86.ActiveCfg = Release|x86
+		{E456E870-4498-43CF-A21D-DB953E012359}.Release|x86.Build.0 = Release|x86
+		{0648D4EC-A95F-4EA0-9F37-1967ADA609E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0648D4EC-A95F-4EA0-9F37-1967ADA609E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0648D4EC-A95F-4EA0-9F37-1967ADA609E6}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{0648D4EC-A95F-4EA0-9F37-1967ADA609E6}.Debug|x86.Build.0 = Debug|Any CPU
+		{0648D4EC-A95F-4EA0-9F37-1967ADA609E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0648D4EC-A95F-4EA0-9F37-1967ADA609E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0648D4EC-A95F-4EA0-9F37-1967ADA609E6}.Release|x86.ActiveCfg = Release|Any CPU
+		{0648D4EC-A95F-4EA0-9F37-1967ADA609E6}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {361A442F-7B3C-40B7-B625-68B8549BF0FE}
+	EndGlobalSection
+EndGlobal
